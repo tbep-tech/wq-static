@@ -3,9 +3,8 @@ sudo: false
 cache: packages
 git:
   depth: false
-
 script:
-- Rscript -e 'rmarkdown::render("wq.Rmd")'
+- Rscript -e 'rmarkdown::render("test.Rmd")'
 - git config --global user.name "fawda123"
 - git config --global user.email "mbafs2012@gmail.com"
 - git pull https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:${TRAVIS_BRANCH}
@@ -23,5 +22,5 @@ env:
   global:
   - TRAVIS_REPO_SLUG=tbep-tech/wq-static
   - TRAVIS_BRANCH=master
-  - secure: Tw20794PwlDfA4dUHWvkJ3jqy3f5uLIzyDjnZaDUPzWMdsyb1LdmgKS+o2PlOUhLI3OLrsIAzsqRBuR7mx6xOM/OysjsOQu/nA0VwpqAYaA2bvEgbPQgJ9JIHPfHt999ujAX2MhbN3Oj6jmLS0ZKTsxsb3LOV8AlLEpObOI0h9qaPmoe6ncb0sewH5T++GGAAap8K9PJxtPW+ypYGTHnXIKLyixxaLaa9+aKGI83WtJPJNEVRCES3SZKNG+OfjVU9ZXbIZUGmtGIsw5xN3eyA/6TgEyRRmOgC/KjA6rROMAeyd7QRKC2Hgbm2Vt5Uf10uX9pd4lVOozZfu2KkseEbpBlWkvVLbkrkFYBoilR/hbU7blM1U3Yuo+q9K6MdndsR48yw/SpkKbsOc6KfE0JN+bHGIsDHJaEbW14jCPiZrMW2ZhAqsUuu9IsFQDQUg4KDicch64/5u5DnO7710Y01q9/kibshfVuAp2wEs2lf3+nfK86r30Fcw4XvW/9o+K/8/bYdtwpBRk0O4BKe13yFYFV+KHlmEU/8dKP+XAr+PZAeQDWulTTF/k/frqSM4ehiSeFyHS+Ju5k2sxSa0gibFA94UGbkaNoevlZOLa6xo3cA3WJbpn08rjwTE8IF5Jj0Q6gA6Rb7iUdJupQ9aCaYEQEJaJIf4ROq7DUpXywaok=
   - CRAN: http://cran.rstudio.com
+  - secure: Ix1SzTbkNbqaBWjWeTMz/in5J7+lf82gPq6vWGflpyJVensikKDuM4S8Jm9XnHzYUaZYJz9e/CCBXkSx5kPDRC8YtJcNWBIwFS8qUbBAXfXvGunhWViaZh4aGaXRZ9ax6Rl26l4lBQN6W7/CbGfpSYSCuGsPOlIwCx+7bfV7m7JYltIVPEae1enUlTjxTjupSvpcA6gY/iRAhfJ/VSJVp2okZA6lORN/fOa/eafsL3F60sCFqu81Vr5oOAU3AsLh+vJlJRzqzpiv1nFXH6VTb1v6WhDUm67vL8dQYLMhUFBov4lim/FN9HgeHbWvSs2dNzcznCfUz4sMUDWa/mm5t39swVwbz9YNv7L4oaxahIyT/pSlbZz8rbjnDG+cj4YOLikTzp3SGwkng1J9tCaZvaIN2wS4MKuBYSJVA2S6vhQ+uJF87o44TE9xZjxcBMULXlcb+ZHXCSgTtHJwJ72/0b7395S7IXAdIl5sHHLqmFIGYGKOOXqa4xh+VaLdZ0A1UcSWoHbbfwmqDrL+UlKOntv+/kodkW+LK7khY3+FN6QBaOFUec8xvZEWxjl2CrknDYWAKno49Gg2ovJpWTOICzVJKNoYJ/PyFSqqtfc0wTFJ+F4ZJs9pXV/Vp3v/paaUU5N8VBG8vNkKbXK4qA53lJs3dZXaaHh3nEzr7TOAQ1o=

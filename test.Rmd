@@ -1,0 +1,15 @@
+---
+title: "Test"
+date: "`r format(Sys.time(), '%Y-%m-%d %H:%M')`"
+output: 
+  html_document: 
+  code_folding: hide
+toc: yes
+toc_float: yes
+---
+  
+```{r setup, include=F}
+1 + 1
+```
+
+
