@@ -46,7 +46,7 @@ include_graphics(here('www', 'stoplight.PNG'))
 
 # `r format(Sys.time(), '%Y')` Decision Matrix Results {.tabset}
 
-Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table 1; Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figure \@ref(fig:attainmat)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table 1; Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figures \@ref(fig:attainmat), \@ref(fig:sitemap)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
 
 ```{r chlthrplot, fig.height = 8, fig.width = 12, fig.cap="Historic chlorophyll-a annual averages for the four bay segments."}
 yrrng <- c(1975, maxyr)
@@ -114,6 +114,10 @@ div(class = "otucome-table",
 
 ```{r attainmat, fig.height = 8, fig.width = 3, fig.align = "center", fig.cap=paste0("Decision matrix results from 1975 to ",  maxyr, ".")}
 show_matrix(epcdata, yrrng = c(1975, maxyr), txtsz = 2.5)
+```
+
+```{r sitempa, fig.height = 7, fig.width = 5, fig.align = "center", fig.cap=paste0("Chlorophyll attainment outcomes by site for ",  maxyr, ".")}
+show_sitemap(epcdata, yrsel = maxyr)
 ```
 
 
