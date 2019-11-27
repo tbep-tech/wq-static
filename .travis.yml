@@ -1,6 +1,11 @@
 language: r
 sudo: false
 cache: packages
+apt_packages:
+  - libudunits2-dev
+  - libgdal-dev
+  - libgeos-dev
+  - libproj-dev
 git:
   depth: false
 script:
