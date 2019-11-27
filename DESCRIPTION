@@ -1,6 +1,18 @@
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: knitr, rmarkdown, here, tbeptools
+Imports:
+  bookdown, 
+  dplyr, 
+  htmltools,
+  knitr, 
+  magrittr, 
+  patchwork, 
+  reactable,
+  rmarkdown, 
+  here, 
+  tbeptools
 Remotes: 
-  tbep-tech/tbeptools
+  tbep-tech/tbeptools,
+  thomasp85/patchwork
+  

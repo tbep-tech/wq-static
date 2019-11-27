@@ -1,104 +1,119 @@
 ---
-title: "Get EPCHC Data, Tidy it Up & Perform TBEP Annual WQ Assessment"
-author: "Ed Sherwood <esherwood@tbep.org>, Ben Best <ben@ecoquants.com>, Marcus Beck <marcusb@sccwrp.org>"
-date: "`r format(Sys.time(), '%Y-%m-%d %H:%M')`"
+title: "`r format(Sys.time(), '%Y')` Tampa Bay Water Quality Assessment"
 output: 
-  html_document: 
-    code_folding: hide
-    toc: yes
-    toc_float: yes
+  bookdown::html_document2:
+    css: styles.css
 ---
 
-```{r setup, include=F}
-knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```{r setup, include = F, message = F, echo = F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 # libraries
+library(dplyr)
+library(knitr)
 library(here)
-library(tbeptools) # remotes::install_github("tbep-tech/tbeptools")
+library(tbeptools) 
+library(patchwork)
+library(magrittr)
+library(reactable)
+library(htmltools)
+# remotes::install_github("tbep-tech/tbeptools")
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-xlsx <- here('data-raw', '2019_Results_Updated.xls')
-```
+xlsx <- here('data-raw', 'Results_Updated.xls')
 
-## Download and import EPCHC dataset
-
-```{r epchc_import}
-# load data and some light formatting
+# import and download if new
 epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
-epcdata
+maxyr <- max(epcdata$yr)
 ```
 
-## Plot Mean Annual Chl-a Values by Bay Segment {.tabset}
+# Background
 
-### Old Tampa Bay
+Light availability to seagrass is the guiding paradigm for TBEP’s Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure \@ref(fig:sgdiag)) and reduce light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity).
 
-```{r chlplot_otb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "OTB", thr = "chla")
+```{r sgdiag, fig.align='center', out.width="70%", fig.cap="Guiding paradigm for Tampa Bay seagrass restoration through the management of nitrogen loads."}
+include_graphics(here('www', 'Nitrogen Management Illustration.png'))
 ```
 
-### Hillsborough Bay
+# Decision Support Approach
 
-```{r chlplot_hb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "HB", thr = "chla")
+Year to year algae abundance (measured as chlorophyll-a concentrations) and visible light penetration through the water column (depth of secchi disk visibility) have been identified as critical water quality indicators in Tampa Bay. Tracking the attainment of bay segment specific targets for these indicators provides the framework for developing and initiating bay management actions. TBEP management actions adopted in response to the annually-assessed decision support results are shown in Figure \@ref(fig:stoplight).
+
+```{r stoplight, fig.align='center', out.width="50%", fig.cap="Management actions assigned to each bay segment."}
+include_graphics(here('www', 'stoplight.PNG'))
 ```
 
-### Middle Tampa Bay
+# `r format(Sys.time(), '%Y')` Decision Matrix Results {.tabset}
 
-```{r chlplot_mtb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "MTB", thr = "chla")
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table 1; Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figure \@ref(fig:attainmat)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
+
+```{r chlthrplot, fig.height = 8, fig.width = 12, fig.cap="Historic chlorophyll-a annual averages for the four bay segments."}
+yrrng <- c(1975, maxyr)
+p1 <- show_thrplot(epcdata, bay_segment = "OTB", thr = "chla", yrrng = yrrng)
+p2 <- show_thrplot(epcdata, bay_segment = "HB", thr = "chla", yrrng = yrrng)
+p3 <- show_thrplot(epcdata, bay_segment = "MTB", thr = "chla", yrrng = yrrng)
+p4 <- show_thrplot(epcdata, bay_segment = "LTB", thr = "chla", yrrng = yrrng)
+
+p1 + p2 + p3 + p4 + plot_layout(ncol = 2)
 ```
 
-### Lower Tampa Bay
+```{r segtab}
+totab <- anlz_yrattain(epcdata, yrsel = maxyr)
 
-```{r chlplot_ltb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "LTB", thr = "chla")
+colfun <- function(x){
+  
+  out <- case_when(
+    x == 'red' ~ '#FF3333', 
+    x == 'yellow' ~ '#F9FF33', 
+    x == 'green' ~ '#33FF3B'
+    )
+  
+  return(out)
+  
+}
+
+tab <- reactable(totab, 
+          columnGroups = list(
+            colGroup(name = "Chlorophyll-a (ug/L)", columns = c('chla_val', 'chla_target')),
+            colGroup(name = "Light attenuation (m<sup>-1</sup>)", columns = c('la_val', 'la_target'), html = T)
+          ),
+          columns = list(
+            bay_segment = colDef(
+              name = "Bay segment"
+            ), 
+            chla_val = colDef(
+              name = 'Mean', 
+              format = colFormat(digits = 1)
+            ), 
+            chla_target = colDef(
+              name = 'Target'
+            ), 
+            la_val = colDef(
+              name = 'Mean', 
+              format = colFormat(digits = 2)
+            ), 
+            la_target = colDef(
+              name = 'Target'
+            ),
+            outcome = colDef(
+              name = 'Outcome',
+              style = function(value){
+               list(background = colfun(value))
+              }
+            )
+            
+          )
+)
+
+div(class = "otucome-table",
+  div(class = "title", paste0("Table 1: Results for ", maxyr)),
+  tab
+)
 ```
 
-## Plot Mean Annual Light Attenuation Values by Bay Segment {.tabset}
-
-### Old Tampa Bay
-
-```{r laplot_otb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "OTB", thr = "la")
+```{r attainmat, fig.height = 8, fig.width = 3, fig.align = "center", fig.cap=paste0("Decision matrix results from 1975 to ",  maxyr, ".")}
+show_matrix(epcdata, yrrng = c(1975, maxyr), txtsz = 2.5)
 ```
 
-### Hillsborough Bay
 
-```{r laplot_hb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "HB", thr = "la")
-```
-
-### Middle Tampa Bay
-
-```{r laplot_mtb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "MTB", thr = "la")
-```
-
-### Lower Tampa Bay
-
-```{r laplot_ltb, fig.height = 5, fig.width = 8}
-show_thrplot(epcdata, bay_segment = "LTB", thr = "la")
-```
-
-## Target attainment matrix {.tabset}
-
-### Numerical results
-
-```{r, fig.height = 12, fig.width = 4}
-avedat <- anlz_avedat(epcdata)
-anlz_attain(avedat, magdurout = T)
-anlz_attain(avedat)
-```
-
-### Table with ggplot
-
-```{r, fig.height = 12, fig.width = 4}
-show_matrix(epcdata)
-```
-
-### Table with gt
-
-```{r}
-show_matrix(epcdata, tab = T)
-```
