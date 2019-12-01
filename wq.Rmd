@@ -1,7 +1,6 @@
 ---
 output: 
-  bookdown::html_document2:
-    css: styles.css
+  bookdown::html_document2
 ---
 
 ```{r setup, include = F, message = F, echo = F}
@@ -47,7 +46,7 @@ include_graphics(here('www', 'stoplight.PNG'))
 
 ## `r maxyr` Decision Matrix Results {.tabset}
 
-Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table 1; Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figures \@ref(fig:attainmat), \@ref(fig:sitemap)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \@ref(tab:segtab), Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figures \@ref(fig:attainmat), \@ref(fig:sitemap)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
 
 ```{r chlthrplot, fig.height = 8, fig.width = 12, fig.cap="Historic chlorophyll-a annual averages for the four bay segments."}
 yrrng <- c(1975, maxyr)
@@ -59,7 +58,8 @@ p4 <- show_thrplot(epcdata, bay_segment = "LTB", thr = "chla", yrrng = yrrng)
 p1 + p2 + p3 + p4 + plot_layout(ncol = 2)
 ```
 
-```{r segtab}
+<caption>(#tab:segtab) Results for `r maxyr`</caption>
+```{r}
 totab <- anlz_yrattain(epcdata, yrsel = maxyr)
 
 colfun <- function(x){
@@ -107,10 +107,7 @@ tab <- reactable(totab,
           )
 )
 
-div(class = "otucome-table",
-  div(class = "title", paste0("Table 1: Results for ", maxyr)),
-  tab
-)
+tab
 ```
 
 ```{r attainmat, fig.height = 8, fig.width = 3, fig.align = "center", fig.cap=paste0("Decision matrix results from 1975 to ",  maxyr, ".")}
