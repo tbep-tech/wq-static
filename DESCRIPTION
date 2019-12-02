@@ -13,6 +13,5 @@ Imports:
   here, 
   tbeptools
 Remotes: 
-  tbep-tech/tbeptools,
-  thomasp85/patchwork
+  tbep-tech/tbeptools
   

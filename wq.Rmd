@@ -15,6 +15,7 @@ library(patchwork)
 library(magrittr)
 library(reactable)
 library(htmltools)
+library(ggplot2)
 # remotes::install_github("tbep-tech/tbeptools")
 # devtools::load_all('../tbeptools/.')
 
@@ -55,7 +56,7 @@ p2 <- show_thrplot(epcdata, bay_segment = "HB", thr = "chla", yrrng = yrrng)
 p3 <- show_thrplot(epcdata, bay_segment = "MTB", thr = "chla", yrrng = yrrng)
 p4 <- show_thrplot(epcdata, bay_segment = "LTB", thr = "chla", yrrng = yrrng)
 
-p1 + p2 + p3 + p4 + plot_layout(ncol = 2)
+guide_area() / (p1 + p2 + p3 + p4 + plot_layout(ncol = 2)) + plot_layout(ncol = 1, guides = 'collect', heights = c(0.1, 1))
 ```
 
 <caption>(#tab:segtab) Results for `r maxyr`</caption>
@@ -132,14 +133,15 @@ show_chlmatrix(epcdata, yrrng = c(1975, maxyr))
 
 Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during `r maxyr` and compared to prior years' levels (Figure \@ref(fig:chlboxplot)) . Elevated concentrations in Old Tampa Bay and Lower Tampa Bay were primarily due to *Pyrodinium bahamense* and *Karenia brevis* blooms, respectively. Hillsborough Bay also showed elevated concentrations during two months in 2018 - the fall event coincided with blooms of the nonharmful alga, *Tripos hircus*.
 
-```{r chlboxplot, fig.height = 8, fig.width = 12, fig.cap=paste0('Chlorophyll-a monthly averages from 1975-', maxyr -1, ' for the four bay segments. The monthly averages for ', maxyr, ' are shown in red.')}
+```{r chlboxplot, fig.height = 7, fig.width = 11, fig.cap=paste0('Chlorophyll-a monthly averages from 1975-', maxyr -1, ' for the four bay segments. The monthly averages for ', maxyr, ' are shown in red.')}
 yrrng <- c(1975, maxyr-1)
-p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr)
-p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr)
+p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr) 
+p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr) 
 p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr)
 p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr)
 
-p1 + p2 + p3 + p4 + plot_layout(ncol = 2)
+p1 + p2 + p3 + p4 + plot_layout(ncol = 2, guides = 'collect')
+# guide_area() / (p1 + p2 + p3 + p4 + plot_layout(ncol = 2)) + plot_layout(ncol = 1, guides = 'collect', heights = c(0.1, 1))
 ```
 
 ## Tampa Bay Seagrass Recovery
