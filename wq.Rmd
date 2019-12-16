@@ -4,21 +4,30 @@ output:
     self_contained: false
     pandoc_args: --mathjax
     highlight: espresso
+css: styles.css
 number_sections: false
 main_findings: "2019 Tampa Bay Water Quality Assessment"
 main_topsize: 0.05
-main_bottomsize: 0.025
+main_bottomsize: 0.03
 main_fontfamily: "Arial"
+logoleft_name: www/tbep_logo2.png
+primary_colour: "#94f2c8"
 ---
+
+<style>
+#main-img-left, #main-img-center, #main-img-right {
+ width: 5%;
+}
+</style>
   
 ```{r setup, include = F, message = F, echo = F}
-knitr::opts_chunk$set(echo = F, message = F, warning = F)
+knitr::opts_chunk$set(echo = F, message = F, warning = F, eval = T)
 
 # libraries
 library(dplyr)
 library(knitr)
 library(here)
-library(tbeptools) 
+library(tbeptools)
 library(patchwork)
 library(magrittr)
 library(reactable)
@@ -32,7 +41,7 @@ xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
 epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
-maxyr <- max(epcdata$yr)
+maxyr <- 2019
 ```
 
 # Background
@@ -40,7 +49,7 @@ maxyr <- max(epcdata$yr)
 Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure \@ref(fig:sgdiag)) and reduce light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity).
 
 ```{r sgdiag, fig.align='center', out.width="100%", fig.cap="Guiding paradigm for Tampa Bay seagrass restoration through the management of nitrogen loads."}
-include_graphics(here('www', 'Nitrogen Management Illustration.png'))
+knitr::include_graphics(here('www', 'Nitrogen Management Illustration.png'))
 ```
 
 # Decision Support Approach
@@ -48,7 +57,7 @@ include_graphics(here('www', 'Nitrogen Management Illustration.png'))
 Year to year algae abundance (measured as chlorophyll-a concentrations) and visible light penetration through the water column (depth of secchi disk visibility) have been identified as critical water quality indicators in Tampa Bay. Tracking the attainment of bay segment specific targets for these indicators provides the framework for developing and initiating bay management actions. TBEP management actions adopted in response to the annually-assessed decision support results are shown in Figure \@ref(fig:stoplight).
 
 ```{r stoplight, fig.align='center', out.width="100%", fig.cap="Management actions assigned to each bay segment."}
-include_graphics(here('www', 'stoplight.PNG'))
+knitr::include_graphics(here('www', 'stoplight.PNG'))
 ```
 
 # `r maxyr` Decision Matrix Results {.tabset}
@@ -155,6 +164,6 @@ p1 + p2 + p3 + p4 + plot_layout(ncol = 2, guides = 'collect')
 Tampa Bay's total seagrass coverage continues to remain above the recovery goal, though a slight decrease in acreage was observed from 2016 to 2018. The baywide coverage was estimated to be 40,618 acres as of 2018 (Figure \@ref(fig:sgacre)). As in 2016, total seagrass coverage remains above both the baywide target (38,000 acres) and the total estimated historic seagrass coverage of the 1950s (40,420 acres). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event that plagued the region throughout 2018 (note: the 2018 coverage estimate for Tampa Bay was developed prior to the red tide affecting the Bay). More information on the Bay's seagrass recovery utilizing transect monitoring data can also be found in [TBEP Technical Publication #08-16](https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf).
 
 ```{r sgacre, out.width="100%", fig.cap="Historic seagrass acreage estimates for Tampa Bay from 1950-2018", fig.align="center"}
-include_graphics(here('www', 'Seagrass_Acreage_1950_2018.png'))
+knitr::include_graphics(here('www', 'Seagrass_Acreage_1950_2018.png'))
 ```
 

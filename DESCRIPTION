@@ -8,6 +8,7 @@ Imports:
   knitr, 
   magrittr, 
   patchwork, 
+  posterdown,
   reactable,
   rmarkdown, 
   here, 
