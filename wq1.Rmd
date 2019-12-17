@@ -1,0 +1,169 @@
+---
+output: 
+  posterdown::posterdown_betterport:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: espresso
+css: styles.css
+number_sections: false
+main_findings: "2019 Tampa Bay Water Quality Assessment"
+main_topsize: 0.075
+main_bottomsize: 0.075
+main_fontfamily: "Rasa"
+main_textsize: "43px"
+body_textsize: "12px"
+caption_textsize: "12px"
+# logoleft_name: www/epchc.png
+# logocenter_name: www/Janicki3.png
+logoright_name: www/alllogo.png
+primary_colour: "#419ABB"
+secondary_colour: "#BCF3DA"
+accent_colour: "#cc0000"
+poster_height: "8.5in"
+poster_width: "11in"
+column_numbers: 3
+---
+
+<style>
+#main-img-left {
+ width: 10%;
+}
+#main-img-center {
+ width: 10%;
+}
+#main-img-right {
+ width: 30%;
+}
+h1 { /* Header 1 */
+  font-size: 24px;
+}
+.mybreak {
+   break-before: column;
+}
+</style>
+  
+```{r setup, include = F, message = F, echo = F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, eval = T)
+
+# libraries
+library(dplyr)
+library(knitr)
+library(here)
+library(tbeptools)
+library(patchwork)
+library(magrittr)
+library(reactable)
+library(htmltools)
+library(ggplot2)
+# remotes::install_github("tbep-tech/tbeptools")
+# devtools::load_all('../tbeptools/.')
+
+# local file path
+xlsx <- here('data-raw', 'Results_Updated.xls')
+
+# import and download if new
+epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
+maxyr <- 2019
+```
+
+# Background
+
+Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure \@ref(fig:sgdiag)) and reduce light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity).
+
+```{r sgdiag, fig.align='center', out.width="75%", fig.cap="Guiding paradigm for Tampa Bay seagrass restoration through the management of nitrogen loads."}
+knitr::include_graphics(here('www', 'Nitrogen Management Illustration.png'))
+```
+
+# Decision Support Approach
+
+Year to year algae abundance (measured as chlorophyll-a concentrations) and visible light penetration through the water column (depth of secchi disk visibility) have been identified as critical water quality indicators in Tampa Bay. Tracking the attainment of bay segment specific targets for these indicators provides the framework for developing and initiating bay management actions. TBEP management actions adopted in response to the annually-assessed decision support results are shown in Figure \@ref(fig:stoplight).
+
+```{r stoplight, fig.align='center', out.width="75%", fig.cap="Management actions assigned to each bay segment."}
+knitr::include_graphics(here('www', 'stoplight.PNG'))
+```
+
+# `r maxyr` Decision Matrix Results {.tabset}
+
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \@ref(tab:segtab), Figure \@ref(fig:chlthrplot)). The nuisance alga, Pyrodinium bahamense, was again reported in Old Tampa Bay (OTB) during the Summer and Fall 2018, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figures \@ref(fig:attainmat), \@ref(fig:sitemap)). However, effective light penetration was supportive of seagrass in all bay segments (Table 1).
+
+```{r chlthrplot, fig.height = 6, fig.width = 9, out.width = '100%', fig.cap="Historic chlorophyll-a annual averages for the four bay segments."}
+yrrng <- c(1975, maxyr)
+p1 <- show_thrplot(epcdata, bay_segment = "OTB", thr = "chla", yrrng = yrrng)
+p2 <- show_thrplot(epcdata, bay_segment = "HB", thr = "chla", yrrng = yrrng)
+p3 <- show_thrplot(epcdata, bay_segment = "MTB", thr = "chla", yrrng = yrrng)
+p4 <- show_thrplot(epcdata, bay_segment = "LTB", thr = "chla", yrrng = yrrng)
+
+guide_area() / (p1 + p2 + p3 + p4 + plot_layout(ncol = 2)) + plot_layout(ncol = 1, guides = 'collect', heights = c(0.1, 1))
+```
+
+<caption>(#tab:segtab) Results for `r maxyr`</caption>
+```{r, out.width = "20%"}
+totab <- anlz_yrattain(epcdata, yrsel = maxyr)
+
+colfun <- function(x){
+  
+  out <- case_when(
+    x == 'red' ~ '#FF3333', 
+    x == 'yellow' ~ '#F9FF33', 
+    x == 'green' ~ '#33FF3B'
+    )
+  
+  return(out)
+  
+}
+
+maxwidth <- 270
+maxwidcol <- maxwidth / 6
+tab <- reactable(totab, 
+          columnGroups = list(
+            colGroup(name = "Chlorophyll-a (ug/L)", columns = c('chla_val', 'chla_target')),
+            colGroup(name = "Light attenuation (m<sup>-1</sup>)", columns = c('la_val', 'la_target'), html = T)
+          ),
+          columns = list(
+            bay_segment = colDef(
+              name = "Bay segment",
+              maxWidth = 1.1*maxwidcol,
+            ), 
+            chla_val = colDef(
+              name = 'Mean', 
+              maxWidth = maxwidcol,
+              format = colFormat(digits = 1)
+            ), 
+            chla_target = colDef(
+              name = 'Target',
+              maxWidth = maxwidcol
+            ), 
+            la_val = colDef(
+              name = 'Mean', 
+              maxWidth = maxwidcol,
+              format = colFormat(digits = 2)
+            ), 
+            la_target = colDef(
+              name = 'Target', 
+              maxWidth = 1.1*maxwidcol,
+            ),
+            outcome = colDef(
+              name = 'Outcome',
+              maxWidth = maxwidcol,
+              style = function(value){
+               list(background = colfun(value))
+              }
+            )
+            
+          ), 
+          width = 1.1 * maxwidth,
+          # height = "160px", 
+          compact =T, 
+          wrap = T, resizable = T
+)
+
+tab
+```
+
+```{r attainmat, fig.height = 8, fig.width = 5, out.width = "70%", fig.align = "center", fig.cap=paste0("Decision matrix results from 1975 to ",  maxyr, ".")}
+show_matrix(epcdata, yrrng = c(1975, maxyr), txtsz = 4)
+```
+
+```{r sitemap, fig.height = 5, fig.width = 4, fig.align = "center", out.width = "60%", fig.cap=paste0("Chlorophyll attainment outcomes by site for ",  maxyr, ".")}
+show_sitemap(epcdata, yrsel = maxyr)
+```
