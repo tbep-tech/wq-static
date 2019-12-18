@@ -9,9 +9,10 @@ number_sections: false
 main_findings: "Progress Towards Meeting Regulatory Goals"
 main_topsize: 0.075
 main_bottomsize: 0.075
-main_fontfamily: "Rasa"
+main_fontfamily: "Lato"
 main_textsize: "43px"
 body_textsize: "12px"
+reference_textsize: "12px"
 caption_textsize: "12px"
 # logoleft_name: www/epchc.png
 # logocenter_name: www/Janicki3.png
@@ -22,6 +23,9 @@ accent_colour: "#cc0000"
 poster_height: "8.5in"
 poster_width: "11in"
 column_numbers: 3
+bibliography: bibs.bib
+csl: stylefile.csl
+nocite: '@tbep1119'
 ---
 
 <style>
@@ -64,6 +68,10 @@ xlsx <- here('data-raw', 'Results_Updated.xls')
 # import and download if new
 epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
 maxyr <- 2019
+
+# biblio
+bibs <- readLines('https://raw.githubusercontent.com/tbep-tech/tbep-refs/master/bibs.bib')
+writeLines(bibs, 'bibs.bib')
 ```
 
 # Maintaining Reasonable Assurance & TMDL Compliance
