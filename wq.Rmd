@@ -10,13 +10,15 @@ main_findings: "2019 Tampa Bay Water Quality Assessment"
 main_topsize: 0.05
 main_bottomsize: 0.03
 main_fontfamily: "Arial"
-logoleft_name: www/tbep_logo2.png
-primary_colour: "#94f2c8"
+logoright_name: www/alllogo.png
+primary_colour: "#419ABB"
+secondary_colour: "#BCF3DA"
+accent_colour: "#cc0000"
 ---
 
 <style>
 #main-img-left, #main-img-center, #main-img-right {
- width: 5%;
+ width: 20%;
 }
 </style>
   

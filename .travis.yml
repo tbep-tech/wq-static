@@ -9,6 +9,7 @@ apt_packages:
 git:
   depth: false
 script:
+- Rscript -e 'rmarkdown::render("wq.Rmd")'
 - Rscript -e 'rmarkdown::render("wq1.Rmd")'
 - Rscript -e 'rmarkdown::render("wq2.Rmd")'
 - git config --global user.name "fawda123"
