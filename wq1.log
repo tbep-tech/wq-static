@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.8)  19 DEC 2019 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.8)  19 DEC 2019 17:20
 entering extended mode
-**./test.tex
-(test.tex
+**./wq1.tex
+(wq1.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 (C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamer.cls
@@ -940,6 +940,11 @@ Package beamerposter Info: fontscale=1.0, myfontscale=0.45 on input line 175.
 ( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
 ( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
 ( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ))
+(C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortbl.sty
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+\everycr=\toks49
+\minrowclearance=\skip65
+)
 (C:\Users\Marcus\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -1025,8 +1030,8 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (test.aux)
-\openout1 = `test.aux'.
+)) (wq1.aux)
+\openout1 = `wq1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
@@ -1095,12 +1100,12 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 \scratchbox=\box53
 \nofMPsegments=\count181
 \nofMParguments=\count182
-\everyMPshowfont=\toks49
+\everyMPshowfont=\toks50
 \MPscratchCnt=\count183
 \MPscratchDim=\dimen281
 \MPnumerator=\count184
 \makeMPintoPDFobject=\count185
-\everyMPtoPDFconversion=\toks50
+\everyMPtoPDFconversion=\toks51
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1130,9 +1135,9 @@ LaTeX Info: Redefining \ref on input line 81.
 LaTeX Info: Redefining \pageref on input line 81.
 LaTeX Info: Redefining \nameref on input line 81.
 
-(test.out) (test.out)
+(wq1.out) (wq1.out)
 \@outlinefile=\write5
-\openout5 = `test.out'.
+\openout5 = `wq1.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 81.
@@ -1204,7 +1209,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
- (test.nav)
+ (wq1.nav)
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <5.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <19.35> not available
@@ -1217,215 +1222,221 @@ File: www/alllogo.png Graphic file (type png)
  <use www/alllogo.png>
 Package pdftex.def Info: www/alllogo.png used on input line 81.
 (pdftex.def)             Requested size: 215.00696pt x 36.60439pt.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.2> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 127.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7.78> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 127.
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <7.78> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 127.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <7.78> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 127.
-File: www/alllogo.png Graphic file (type png)
 
+<figure/attainmat.pdf, id=14, 325.215pt x 1084.05pt>
+File: figure/attainmat.pdf Graphic file (type pdf)
+
+<use figure/attainmat.pdf>
+Package pdftex.def Info: figure/attainmat.pdf used on input line 200.
+(pdftex.def)             Requested size: 196.20663pt x 654.04102pt.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.2> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 200.
+LaTeX Font Info:    Calculating math sizes for size <11.2> on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.2> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7.83995> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <5.59999> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+ <www/nitro.PNG, id=15, 943.27406pt x 490.83376pt>
+File: www/nitro.PNG Graphic file (type png)
+
+<use www/nitro.PNG>
+Package pdftex.def Info: www/nitro.PNG used on input line 200.
+(pdftex.def)             Requested size: 158.02003pt x 82.21983pt.
+ <www/stoplight.PNG, id=16, 524.71031pt x 329.73187pt>
+File: www/stoplight.PNG Graphic file (type png)
+
+<use www/stoplight.PNG>
+Package pdftex.def Info: www/stoplight.PNG used on input line 200.
+(pdftex.def)             Requested size: 158.02003pt x 99.29765pt.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6.48> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Calculating math sizes for size <5.4> on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <5.4> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <3.77997> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <2.7> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]\OT1/phv/b/n/5.4 Bay
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/phv/b/n/5.4 seg-
+ []
+
+
+Overfull \hbox (3.13144pt too wide) in paragraph at lines 200--200
+[]\OT1/phv/b/n/5.4 Chlorophyll-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]\OT1/phv/b/n/5.4 Effective Light
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/phv/b/n/5.4 Pen-e-tra-tion
+ []
+
+
+Overfull \hbox (6.48235pt too wide) in paragraph at lines 200--200
+[]\OT1/phv/m/n/5.4 outcome 
+ []
+
+
+Overfull \hbox (3.64435pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 10\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 64$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 76$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 83$| 
+ []
+
+
+Overfull \hbox (3.97203pt too wide) in paragraph at lines 200--200
+[]|\OT1/phv/m/n/5.4 yellow| 
+ []
+
+
+Overfull \hbox (3.64435pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 11\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 31$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 13\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 2$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 97$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 1\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 58$| 
+ []
+
+
+Overfull \hbox (2.91351pt too wide) in paragraph at lines 200--200
+[]|\OT1/phv/m/n/5.4 green| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 5\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 83$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 59$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 83$| 
+ []
+
+
+Overfull \hbox (2.91351pt too wide) in paragraph at lines 200--200
+[]|\OT1/phv/m/n/5.4 green| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 4\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 05$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 61$| 
+ []
+
+
+Overfull \hbox (0.642pt too wide) in paragraph at lines 200--200
+[]|$\OT1/phv/m/n/5.4 0\OML/cmm/m/it/5.4 :\OT1/phv/m/n/5.4 63$| 
+ []
+
+
+Overfull \hbox (2.91351pt too wide) in paragraph at lines 200--200
+[]|\OT1/phv/m/n/5.4 green| 
+ []
+
+<figure/thrplot.pdf, id=21, 578.16pt x 505.89pt>
+File: figure/thrplot.pdf Graphic file (type pdf)
+ <use figure/thrplot.pdf>
+Package pdftex.def Info: figure/thrplot.pdf used on input line 200.
+(pdftex.def)             Requested size: 210.69696pt x 184.35883pt.
+
+<figure/sitemap.pdf, id=22, 289.08pt x 361.35pt>
+File: figure/sitemap.pdf Graphic file (type pdf)
+ <use figure/sitemap.pdf>
+Package pdftex.def Info: figure/sitemap.pdf used on input line 200.
+(pdftex.def)             Requested size: 122.90746pt x 168.75063pt.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7.78> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <7.78> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <7.78> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 200.
+
+Overfull \vbox (19.64449pt too high) detected at line 200
+ []
+
+File: www/alllogo.png Graphic file (type png)
 <use www/alllogo.png>
-Package pdftex.def Info: www/alllogo.png used on input line 127.
+Package pdftex.def Info: www/alllogo.png used on input line 200.
 (pdftex.def)             Requested size: 215.00696pt x 36.60439pt.
  [1{C:/Users/Marcus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
- <./www/alllogo.png>]
+ <./www/alllogo.png> <./figure/attainmat.pdf> <./www/nitro.PNG> <./www/stopligh
+t.PNG> <./figure/thrplot.pdf> <./figure/sitemap.pdf>]
 \tf@nav=\write6
-\openout6 = `test.nav'.
+\openout6 = `wq1.nav'.
 
 \tf@toc=\write7
-\openout7 = `test.toc'.
+\openout7 = `wq1.toc'.
 
 \tf@snm=\write8
-\openout8 = `test.snm'.
+\openout8 = `wq1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
- (test.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-
-
- *File List*
-  beamer.cls    2018/02/20 v3.50 A class for typesetting presentations
-beamerbasemodes.sty    
-etoolbox.sty    2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-beamerbasedecode.sty    
-   ifpdf.sty    2017/03/15 v3.2 Provides the ifpdf switch
-beamerbaseoptions.sty    
-  keyval.sty    2014/10/28 v1.15 key=value parser (DPC)
-geometry.sty    2010/09/12 v5.6 Page Geometry
-  ifvtex.sty    2016/05/16 v1.6 Detect VTeX and its facilities (HO)
- ifxetex.sty    2010/09/12 v0.6 Provides ifxetex conditional
-geometry.cfg
-  size11.clo    2014/09/29 v1.4h Standard LaTeX file (size option)
- pgfcore.sty    2010/04/11 v3.0.1a (rcs-revision 1.7)
-graphicx.sty    2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-graphics.sty    2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
-    trig.sty    2016/01/03 v1.10 sin cos tan (DPC)
-graphics.cfg    2016/06/04 v1.11 sample graphics configuration
-  pdftex.def    2017/01/12 v0.06k Graphics/color for pdfTeX
-infwarerr.sty    2016/05/16 v1.4 Providing info/warning/error messages (HO)
- ltxcmds.sty    2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-  pgfsys.sty    2014/07/09 v3.0.1a (rcs-revision 1.48)
-  pgfrcs.sty    2015/08/07 v3.0.1a (rcs-revision 1.31)
-everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
-  pgfrcs.code.tex
-  pgfsys.code.tex
-pgfsyssoftpath.code.tex    2013/09/09  (rcs-revision 1.9)
-pgfsysprotocol.code.tex    2006/10/16  (rcs-revision 1.4)
-  xcolor.sty    2016/05/11 v2.12 LaTeX color extensions (UK)
-   color.cfg    2016/01/02 v1.6 sample color configuration
- pgfcore.code.tex
- xxcolor.sty    2003/10/24 ver 0.1
-atbegshi.sty    2016/06/09 v1.18 At begin shipout hook (HO)
-hyperref.sty    2017/03/14 v6.85a Hypertext links for LaTeX
-hobsub-hyperref.sty    2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
-hobsub-generic.sty    2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-  hobsub.sty    2016/05/16 v1.14 Construct package bundles (HO)
-ifluatex.sty    2016/05/16 v1.4 Provides the ifluatex switch (HO)
- intcalc.sty    2016/05/16 v1.2 Expandable calculations with integers (HO)
-etexcmds.sty    2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-kvsetkeys.sty    2016/05/16 v1.17 Key value parser (HO)
-kvdefinekeys.sty    2016/05/16 v1.4 Define keys (HO)
-pdftexcmds.sty    2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
-pdfescape.sty    2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-bigintcalc.sty    2016/05/16 v1.4 Expandable calculations on big integers (HO)
-  bitset.sty    2016/05/16 v1.2 Handle bit-vector datatype (HO)
-uniquecounter.sty    2016/05/16 v1.3 Provide unlimited unique counter (HO)
-letltxmacro.sty    2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
- hopatch.sty    2016/05/16 v1.3 Wrapper for package hooks (HO)
-xcolor-patch.sty    2016/05/16 xcolor patch
-atveryend.sty    2016/05/16 v1.9 Hooks at the very end of document (HO)
-refcount.sty    2016/05/16 v3.5 Data extraction from label references (HO)
- hycolor.sty    2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
- auxhook.sty    2016/05/16 v1.4 Hooks for auxiliary files (HO)
-kvoptions.sty    2016/05/16 v3.12 Key value format for package options (HO)
-  pd1enc.def    2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
-hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
-     url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
- hpdftex.def    2017/03/14 v6.85a Hyperref driver for pdfTeX
-rerunfilecheck.sty    2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-beamerbaserequires.sty    
-beamerbasecompatibility.sty    
-beamerbasefont.sty    
- amssymb.sty    2013/01/14 v3.01 AMS font symbols
-amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
-sansmathaccent.sty    2013/03/28
-filehook.sty    2019/10/03 v0.6 Hooks for input files
-beamerbasetranslator.sty    
-translator.sty    2018/01/04 v1.12 Easy translation of strings in LaTeX
-beamerbasemisc.sty    
-beamerbasetwoscreens.sty    
-beamerbaseoverlay.sty    
-beamerbasetitle.sty    
-beamerbasesection.sty    
-beamerbaseframe.sty    
-beamerbaseverbatim.sty    
-beamerbaseframesize.sty    
-beamerbaseframecomponents.sty    
-beamerbasecolor.sty    
-beamerbasenotes.sty    
-beamerbasetoc.sty    
-beamerbasetemplates.sty    
-beamerbaseauxtemplates.sty    
-beamerbaseboxes.sty    
-beamerbaselocalstructure.sty    
-enumerate.sty    2015/07/23 v3.00 enumerate extensions (DPC)
-beamerbasenavigation.sty    
-beamerbasetheorems.sty    
- amsmath.sty    2016/11/05 v2.16a AMS math features
- amstext.sty    2000/06/29 v2.01 AMS text
-  amsgen.sty    1999/11/30 v2.0 generic functions
-  amsbsy.sty    1999/11/29 v1.2d Bold Symbols
-  amsopn.sty    2016/03/08 v2.02 operator names
-  amsthm.sty    2015/03/04 v2.20.2
-beamerbasethemes.sty    
-beamerthemedefault.sty    
-beamerfontthemedefault.sty    
-beamercolorthemedefault.sty    
-beamerinnerthemedefault.sty    
-beamerouterthemedefault.sty    
-  framed.sty    2011/10/22 v 0.96: framed or shaded text with page breaks
-   alltt.sty    1997/06/16 v2.0g defines alltt environment
-beamerthemeI6dv.sty    
-   times.sty    2005/04/12 PSNFSS-v9.2a (SPQR) 
-latexsym.sty    1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
- exscale.sty    2014/09/29 v2.1h Standard LaTeX package exscale
-  subfig.sty    2005/06/28 ver: 1.3 subfig package
- caption.sty    2016/02/21 v3.3-144 Customizing captions (AR)
-caption3.sty    2016/05/22 v1.7-166 caption3 kernel (AR)
-booktabs.sty    2005/04/14 v1.61803 publication quality tables
-   array.sty    2016/10/06 v2.4d Tabular extension package (FMi)
-tabularx.sty    2016/02/03 v2.11 `tabularx' package (DPC)
-   babel.sty    2017/05/19 3.10 The Babel package
- bblopts.cfg    2005/09/08 v0.1 add Arabic and Farsi to "declared" options of b
-abel
- english.ldf    2017/01/24 v3.3q English support from the babel system
-inputenc.sty    2015/03/17 v1.2c Input encoding file
-  latin1.def    2015/03/17 v1.2c Input encoding file
-beamerposter.sty    2018/04/23 v.1.13 latex-beamer poster extension
- xkeyval.sty    2014/12/03 v2.7a package option processing (HA)
- xkeyval.tex    2014/12/03 v2.7a key=value parser (HA)
- type1cm.sty    2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, pa
-tched RF)
-      fp.sty    1995/04/02
-defpattern.sty    1994/10/12
-fp-basic.sty    1996/05/13
-fp-addons.sty    1995/03/15
- fp-snap.sty    1995/04/05
-  fp-exp.sty    1995/04/03
-fp-trigo.sty    1995/04/14
-  fp-pas.sty    1994/08/29
-fp-random.sty    1995/02/23
-  fp-eqn.sty    1995/04/03
-  fp-upn.sty    1996/10/21
- fp-eval.sty    1995/04/03
- upquote.sty    2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
-im
-textcomp.sty    2017/04/05 v2.0i Standard LaTeX package
-  ts1enc.def    2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-  ts1cmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
-  ot1phv.fd    2001/06/04 scalable font definitions for OT1/phv.
-supp-pdf.mkii
-epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
-  grfext.sty    2016/05/16 v1.2 Manage graphics extensions (HO)
- nameref.sty    2016/05/21 v2.44 Cross-referencing by name of section
-gettitlestring.sty    2016/05/16 v1.5 Cleanup title references (HO)
-    test.out
-    test.out
-translator-basic-dictionary-English.dict    
-translator-bibliography-dictionary-English.dict    
-translator-environment-dictionary-English.dict    
-translator-months-dictionary-English.dict    
-translator-numbers-dictionary-English.dict    
-translator-theorem-dictionary-English.dict    
-www/alllogo.png
-www/alllogo.png
- ***********
-
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
-Package rerunfilecheck Info: File `test.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
+ (wq1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
+Package rerunfilecheck Info: File `wq1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20140 strings out of 493323
- 371998 string characters out of 3139064
- 471409 words of memory out of 3000000
- 23187 multiletter control sequences out of 15000+200000
- 16412 words of font info for 32 fonts, out of 3000000 for 9000
+ 20330 strings out of 493323
+ 375095 string characters out of 3139064
+ 500310 words of memory out of 3000000
+ 23344 multiletter control sequences out of 15000+200000
+ 43979 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,68p,847b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,79p,846b,1159s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/he
-lvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a
-.pfb>
-Output written on test.pdf (1 page, 309372 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helveti
+c/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on wq1.pdf (1 page, 1679779 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
