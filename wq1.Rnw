@@ -242,7 +242,7 @@ dev.off()
 
 \vspace{-0.25cm}
 
-\footnotesize \textit{\textbf{Acknowledgments}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods provdided in Janicki, A., Wade, D., Pribble, R.J. 2000. \href{https://www.tbeptech.org/TBEP_TECH_PUBS/2000/TBEP_04_00Chlor-A.pdf}{TBEP Technical Report \#04\-00}.} \\
+\footnotesize \textit{\textbf{Acknowledgments}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods provided in Janicki, A., Wade, D., Pribble, R.J. 2000. \href{https://www.tbeptech.org/TBEP_TECH_PUBS/2000/TBEP_04_00Chlor-A.pdf}{TBEP Technical Report \#04\-00}.} \\
 
 \end{column}
 

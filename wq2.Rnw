@@ -1,0 +1,181 @@
+\documentclass[final,t]{beamer}
+\mode<presentation>{\usetheme{I6dv}}
+
+% settings
+\setbeamerfont{itemize}{size=\normalsize}
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamertemplate{caption}[numbered]
+
+% packages
+\usepackage{xcolor}
+\usepackage{times}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage{exscale}
+\usepackage{subfig}
+\usepackage{booktabs, array}
+\usepackage{tabularx}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[orientation=landscape,size=custom,width=21.59,height=27.94,scale=0.45]{beamerposter} % in cm, equal to 8.5" wide x 11" high
+\usepackage{color, colortbl}
+
+\setcounter{figure}{4}
+
+\title{\Large Progress Towards Meeting Regulatory Goals}
+\author{\normalsize An initiative of the Tampa Bay Nitrogen Management Consortium to Maintain\\ and Restore the Bay's Resources}
+
+<<setup, echo = F, warning = F, message = F, eval = T>>=
+knitr::opts_chunk$set(echo = F, message = F, warning = F, eval = T)
+
+# libraries
+library(dplyr)
+library(knitr)
+library(here)
+library(tbeptools)
+library(patchwork)
+library(magrittr)
+library(reactable)
+library(htmltools)
+library(ggplot2)
+library(tibble)
+library(Hmisc)
+library(gridExtra)
+
+# local file path
+xlsx <- here('data-raw', 'Results_Updated.xls')
+
+# import and download if new
+epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
+maxyr <- 2019
+
+# get legend from an existing ggplot object
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+@
+
+\begin{document}
+
+\begin{frame}
+
+\vspace{-0.2cm} %spacing for block distance from header
+\begin{columns}[t]
+% \hspace{0.4cm}
+
+%%%%%%%%%%%%%%
+% left
+%%%%%%%%%%%%%%
+\begin{column}{.32\linewidth}
+
+\vspace{-0.1in}
+<<chlmat, echo = F, fig = F, include = F>>=
+p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
+  theme(
+    plot.background = element_rect(fill = NA, color = NA), 
+    axis.text.y = element_text(size = 16, colour = 'white'), 
+    axis.text.x = element_text(size = 20, colour = 'white'), 
+    plot.title = element_text(colour = 'white', size = 26)
+  ) + 
+  ggtitle("FDEP Criteria Met:")
+pdf(here('figure', 'chlmat.pdf'), family = 'serif', height = 15, width = 4.5)
+p
+dev.off()
+@
+
+\begin{figure}
+\centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/chlmat.pdf}}
+\caption{\footnotesize Attainment of bay segments for chlorophyll criteria from 1975 to \Sexpr{maxyr}.}
+\label{fig:chlmat}
+\end{figure}
+
+\end{column}
+
+%%%%%%%%%%%%%%
+% right
+%%%%%%%%%%%%%%    
+\begin{column}{.63\linewidth}
+
+\begin{block}{Maintaining Reasonable Assurance \& TMDL compliance}
+\scriptsize
+In November 2017, the Florida Department of Environmental Protection (FDEP) accepted the 2017 Reasonable Assurance Update (2017 RA Update) as submitted by TBEP in partnership with the Tampa Bay Nitrogen Management Consortium. FDEP concluded that the RA Update demonstrated both attainment of seagrass targets and total nitrogen numeric criteria for 2012-2016. During 2019, all bay segments, excluding Old Tampa Bay, were in compliance with the FDEP regulatory criteria for chlorophyll-a concentrations (Figure \ref{fig:chlmat}). The second compliance report for the 2017-2021 period was submitted March 2019. 
+\end{block}
+
+\begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
+\scriptsize
+Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during `r maxyr` and compared to prior years' levels (Figure \ref{fig:chlboxplot}) . Elevated concentrations in Old Tampa Bay and Lower Tampa Bay were primarily due to \textit{Pyrodinium bahamense} and \textit{Karenia brevis} blooms, respectively. Hillsborough Bay also showed elevated concentrations during two months in 2018 - the fall event coincided with blooms of the nonharmful alga, \textit{Tripos hircus}.
+\end{block}
+
+<<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
+yrrng <- c(1975, maxyr)
+txtcol <- 'white'
+thrthm <- theme(
+    plot.background = element_rect(fill = NA, color = NA),
+    axis.text.y = element_text(colour = txtcol, size = 12),
+    axis.title = element_blank(),
+    plot.title = element_text(size = 18, colour = txtcol),
+    legend.text = element_text(size = 12, colour = txtcol),
+    axis.text.x = element_text(size = 10, colour = txtcol)
+  )
+
+p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr) + thrthm
+p1leg <- g_legend(p1)
+p1 <- p1 + theme(legend.position = 'none')
+p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none') 
+p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none')
+p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none')
+
+# align
+# Get the widths
+pA <- ggplot_gtable(ggplot_build(p1))
+pB <- ggplot_gtable(ggplot_build(p2))
+pC <- ggplot_gtable(ggplot_build(p3))
+pD <- ggplot_gtable(ggplot_build(p4))
+maxWidth = grid::unit.pmax(pA$widths[2:3], pB$widths[2:3], pD$widths[2:3], pD$widths[2:3])
+
+# Set the widths
+pA$widths[2:3] <- maxWidth
+pB$widths[2:3] <- maxWidth
+pC$widths[2:3] <- maxWidth
+pD$widths[2:3] <- maxWidth
+
+pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 7, width = 8)
+grid.arrange(
+  p1leg,
+  arrangeGrob(pA, pB, ncol = 2),
+  arrangeGrob(pA, pB, ncol = 2),
+  ncol = 1, heights = c(0.1, 1, 1)
+)
+dev.off()
+@
+
+\begin{figure}
+\centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1\linewidth]{figure/chlboxplot.pdf}}
+\caption{\footnotesize Chlorophyll-a monthly averages from 1975-\Sexpr{maxyr - 1} for the four bay segments. The monthly averages for \Sexpr{ maxyr} are shown in red.Historic chlorophyll-a annual averages for the four bay segments.}
+\label{fig:chlboxplot}
+\end{figure}
+
+\begin{block}{\Sexpr{maxyr} Decision Matrix Results}
+\begin{minipage}{0.55\textwidth}
+\scriptsize
+Tampa Bay's total seagrass coverage continues to remain above the recovery goal, though a slight decrease in acreage was observed from 2016 to 2018. The baywide coverage was estimated to be 40,618 acres as of 2018 (Figure \reffig:sgacre)). As in 2016, total seagrass coverage remains above both the baywide target (38,000 acres) and the total estimated historic seagrass coverage of the 1950s (40,420 acres). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event that plagued the region throughout 2018 (note: the 2018 coverage estimate for Tampa Bay was developed prior to the red tide affecting the Bay). More information on the Bay's seagrass recovery utilizing transect monitoring data can also be found in \href{(https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf}{TBEP Technical Publication \#08\-16}.
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+\includegraphics[width=\textwidth]{www/Seagrass_Acreage_1950_2018.png}
+\end{minipage}
+
+\end{block}
+
+% \vspace{-0.25cm}
+
+\footnotesize \textit{\textbf{Additional info}:  2019 nutrient management compliance assessment available from Sherwood, E., Burke, M. 2019. \href{http://www.tbeptech.org/TBEP_TECH_PUBS/2019/TBEP_11-19_TBNMC_2018_RA_Annual_Assessment.pdf}{TBEP Technical Report \#11\-19}.} \\
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\end{document}
