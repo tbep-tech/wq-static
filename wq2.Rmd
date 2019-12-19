@@ -23,8 +23,8 @@ accent_colour: "#cc0000"
 poster_height: "8.5in"
 poster_width: "11in"
 column_numbers: 3
-bibliography: bibs.bib
-csl: stylefile.csl
+bibliography: tex/bibs.bib
+csl: tex/stylefile.csl
 nocite: '@tbep1119'
 ---
 
@@ -71,7 +71,7 @@ maxyr <- 2019
 
 # biblio
 bibs <- readLines('https://raw.githubusercontent.com/tbep-tech/tbep-refs/master/bibs.bib')
-writeLines(bibs, 'bibs.bib')
+writeLines(bibs, here('tex', 'bibs.bib'))
 ```
 
 # Maintaining Reasonable Assurance & TMDL Compliance

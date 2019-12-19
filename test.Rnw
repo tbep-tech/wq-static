@@ -1,0 +1,214 @@
+\documentclass[final,t]{beamer}
+\mode<presentation>{\usetheme{I6dv}}
+
+% additional settings
+\setbeamerfont{itemize}{size=\normalsize}
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+
+% additional packages
+\usepackage{xcolor}
+\usepackage{times}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage{exscale}
+\usepackage{subfig}
+\usepackage{booktabs, array}
+\usepackage{tabularx}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[orientation=landscape,size=custom,width=115.57,height=99.695,scale=1.55]{beamerposter} % in cm, equal to 45.5" wide x 39.3701" high
+\listfiles
+
+% Display a grid to help align images
+%\beamertemplategridbackground[1cm]
+
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+
+\title{\LARGE Analysis of macrophyte indicator variation as a function of sampling, temporal, and stressor effects}
+\author[Beck et al.]{Marcus W. Beck, Cynthia M. Tomcko, Ray D. Valley, David F. Staples}
+\institute[CB Grad Program, U of M]{University of Minnesota, Minnesota Dept. of Natural Resources, St. Paul, MN}
+\date[May 20, 2014]{May 20, 2014}
+
+\begin{document}
+
+\begin{frame}{}
+
+\vspace{-0.6cm} %spacing for block distance from header
+\begin{columns}[t]
+\hspace{0.4cm}
+
+%%%%%%%%%%%%%%
+% LEFT
+%%%%%%%%%%%%%%
+\begin{column}{.31\linewidth}
+
+%%%%%%
+% abstract
+%%%%%%
+\begin{block}{Abstract}
+\alert{Eight macrophyte indicators were estimated in 23 Minnesota (USA) lakes using four years of surveys to quantify sampling and temporal variation, response to development (phosphorus) and climate stress (growing degree days), and power to detect significant change at various annual sampling intervals.  Indicators included a macrophyte index of biotic integrity, floristic quality index, maximum depth of growth, total species richness, common species richness, species per survey point, and frequency occurrence of rooted species and Chara sp.  Regression and smoothed additive models indicated significant relationships of indicators to lake phosphorus and mean annual growing degree days.  The macrophyte index of biotic integrity, floristic quality index, and the frequency rooted species had minimal sampling variation, were responsive to development or climate stress, and had low annual variation resulting in high to moderate power for detecting significant change.  Results from these analyses will facilitate the use of precise and powerful indicators that respond to stressors that are of concern for the management of freshwater glacial lakes.}
+\end{block}
+
+%%%%%%
+% Objectives
+%%%%%%
+\begin{block}{Objectives}
+\begin{itemize}
+\item Quantify variation of indicators within and among lakes
+\item Identify patterns in variation related to total phosphorus and annual growing degrees days
+\item Quantify minimum sampling effort necessary for power to detect change over a finite period of observation 
+\end{itemize}
+
+\end{block}
+
+%%%%%%
+% Data
+%%%%%%
+\begin{block}{Data}
+Surveys were completed in \alert{23 lakes} each summer from \alert{2008 to 2011}, eight indicators were estimated
+\vspace{1cm}
+\begin{columns}[b]
+\begin{column}{0.45\linewidth}
+
+% state map
+<<map, echo = F, eval = F, fig = F, include = F>>=
+@      	
+  \begin{figure}
+% \centerline{\includegraphics[width=1.05\linewidth]{Beck_etal_poster-map.pdf}}
+\caption{\footnotesize Locations of 23 survey lakes, sampled every four years.}
+\end{figure}
+
+\end{column}
+\begin{column}{0.45\linewidth}
+
+% PI example
+<<pi_ex, echo = F, eval = F, fig = F, include = F>>=
+@	      	
+  \begin{figure}
+% \centerline{\includegraphics[width=1.05\linewidth, trim = 0cm 1cm 0cm 0cm, clip = true]{Beck_etal_poster-pi_ex.pdf}}
+\caption{\footnotesize Example of aquatic plant survey used to estimate indicators.}
+\end{figure}
+\end{column}
+\end{columns}
+\vspace{-1.45cm}
+\end{block}
+
+\end{column}
+
+%%%%%%%%%%%%%%
+  % CENTER
+%%%%%%%%%%%%%%    
+  \begin{column}{.31\linewidth}
+
+%%%%%%
+  % First objective
+%%%%%%
+  \begin{block}{First Objective}
+Substantial \alert{variation} of indicators was observed \alert{within and among} the 23 lakes across \alert{four years}
+
+% barplots of indic values by lake/year/variable
+<<yr_bar, eval = F, echo = F, include = F, fig = F>>=
+@
+  % barplot
+\begin{figure}
+% \centerline{\includegraphics[width=1\linewidth]{Beck_etal_poster-yr_bar.pdf}}
+\caption{\footnotesize Estimated indicator values by lake for four years, colored by mean values between years and each indicator.}
+\end{figure}
+\vspace{-1cm}
+
+% map of mean indicator values across years 
+<<yr_map, eval = F, echo = F, include = F, fig = F>>=
+@
+  % map
+\begin{figure}
+% \centerline{\includegraphics[width=1\linewidth]{Beck_etal_poster-yr_map.pdf}}
+\caption{\footnotesize Spatial variation in mean indicator values in each lake for four years, colored and sized across the indicator range.}
+\end{figure}				
+\vspace{-2cm}
+
+\end{block}
+
+%%%%%%
+  % Second Objective
+%%%%%%
+\begin{block}{Second Objective}
+\alert{Indicators were responsive} to spatial gradients in \alert{total phosphorus} and mean \alert{growing degree days}
+
+% gam figure of tp/gdd by indic
+<<gam, eval = F, echo = F, fig = F, include = F>>=
+
+@			
+ % gam figs using subfigure
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[][]{
+  % \centerline{\includegraphics[width=1\textwidth,keepaspectratio=T,page=2]{Beck_etal_poster-gam.pdf}}
+  \label{fig:gam_gdd}
+}
+\vspace{-1.5cm}
+\subfloat[][]{
+  % \centerline{\includegraphics[width=1\textwidth,keepaspectratio=T,page=1]{Beck_etal_poster-gam.pdf}}
+  \label{fig:gam_lntp}
+}
+\vspace{-1cm}
+
+\caption{\footnotesize Relationships of each indicator with total phosphorus and mean growing degrees days expressed with additive smoothing models.  Points are colored and sized in relation to lake latitude.}
+\label{fig:gam}
+\end{figure}
+\vspace{-1cm}
+
+\end{block}
+
+\end{column}
+
+%%%%%%%%%%%%%%
+  % RIGHT
+%%%%%%%%%%%%%%
+  \begin{column}{.31\linewidth}
+
+%%%%%%
+  % Third objective
+%%%%%%
+  \begin{block}{Third Objective}
+Estimates of \alert{total uncertainty} for each indicator were related to differing contributions of \alert{sampling} and \alert{temporal} uncertainty
+% table for indicator uncertainty
+<<unc_tab, results = 'asis', echo = F, eval = F>>=
+@	
+  
+  \vspace{1cm}
+Indicators had \alert{varying power} to detect declines after twenty years at different \alert{annual sampling intervals}
+
+<<pow_fig, echo = F, eval = F, include = F, fig = F>>=
+
+@
+  % power figure
+\begin{figure}
+% \centerline{\includegraphics[width=1\linewidth, trim = 0cm 0cm 0cm 0.5cm, clip = true]{Beck_etal_poster-pow_fig.pdf}}
+\caption{\footnotesize Estimated power for detecting indicator changes after twenty years at different sampling frequencies and rates of decline.  Sampling frequencies were evaluated from once a year to every five years.  Proportion decline indicates the change in the initial indicator value after twenty years.}
+\end{figure}	
+
+\vspace{-2cm}
+\end{block}
+
+%%%%%%
+% Conclusions
+%%%%%%
+\begin{block}{Conclusions}
+\begin{itemize} 
+\item Biotic integrity, floristic quality, and frequency rooted were least variable and had the highest estimated power
+\item Species-specific indicators, such as Chara, were highly variable and had lower power  
+\item All indicators were related to growing degree days, whereas total phosphorus was a significant predictor for maximum depth and frequency rooted 
+\end{itemize}
+\end{block}
+\vspace{0.7cm}
+\footnotesize \textit{\textbf{Acknowledgments}: Thanks to Pete Jacobson for providing suggestions which improved earlier versions of the analysis.  We also acknowledge the extensive efforts of area managers and field crews for obtaining the data used in our analyses.  The contents are solely the views of the authors and do not represent endorsement by any state or federal agency.\\
+  \textbf{Cite as}: Beck MW, Tomcko CM, Valley RD, Staples DF. In review. Analysis of macrophyte indicator variation as a function of sampling, temporal, and stressor effects. Ecological Indicators.}
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\end{document}
