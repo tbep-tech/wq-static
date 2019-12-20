@@ -61,7 +61,7 @@ g_legend<-function(a.gplot){
 
 \begin{frame}
 
-\vspace{-0.2cm} %spacing for block distance from header
+\vspace{-0.4cm} %spacing for block distance from header
 \begin{columns}[t]
 % \hspace{0.4cm}
 
@@ -99,12 +99,12 @@ dev.off()
 \begin{column}{.63\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL compliance}
-\scriptsize
+\footnotesize
 In November 2017, the Florida Department of Environmental Protection (FDEP) accepted the 2017 Reasonable Assurance Update (2017 RA Update) as submitted by TBEP in partnership with the Tampa Bay Nitrogen Management Consortium. FDEP concluded that the RA Update demonstrated both attainment of seagrass targets and total nitrogen numeric criteria for 2012-2016. During 2019, all bay segments, excluding Old Tampa Bay, were in compliance with the FDEP regulatory criteria for chlorophyll-a concentrations (Figure \ref{fig:chlmat}). The second compliance report for the 2017-2021 period was submitted March 2019. 
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
-\scriptsize
+\footnotesize
 Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during `r maxyr` and compared to prior years' levels (Figure \ref{fig:chlboxplot}) . Elevated concentrations in Old Tampa Bay and Lower Tampa Bay were primarily due to \textit{Pyrodinium bahamense} and \textit{Karenia brevis} blooms, respectively. Hillsborough Bay also showed elevated concentrations during two months in 2018 - the fall event coincided with blooms of the nonharmful alga, \textit{Tripos hircus}.
 \end{block}
 
@@ -117,13 +117,13 @@ thrthm <- theme(
     axis.title = element_blank(),
     plot.title = element_text(size = 18, colour = txtcol),
     legend.text = element_text(size = 12, colour = txtcol),
-    axis.text.x = element_text(size = 10, colour = txtcol)
+    axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0)
   )
 
 p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr) + thrthm
 p1leg <- g_legend(p1)
 p1 <- p1 + theme(legend.position = 'none')
-p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none') 
+p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none')
 p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none')
 p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr) + thrthm + theme(legend.position = 'none')
 
@@ -141,7 +141,7 @@ pB$widths[2:3] <- maxWidth
 pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 
-pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 7, width = 8)
+pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.5, width = 8)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
@@ -151,26 +151,34 @@ grid.arrange(
 dev.off()
 @
 
+\vspace{-0.1in}
+
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1\linewidth]{figure/chlboxplot.pdf}}
 \caption{\footnotesize Chlorophyll-a monthly averages from 1975-\Sexpr{maxyr - 1} for the four bay segments. The monthly averages for \Sexpr{ maxyr} are shown in red.Historic chlorophyll-a annual averages for the four bay segments.}
 \label{fig:chlboxplot}
 \end{figure}
 
-\begin{block}{\Sexpr{maxyr} Decision Matrix Results}
-\begin{minipage}{0.55\textwidth}
-\scriptsize
-Tampa Bay's total seagrass coverage continues to remain above the recovery goal, though a slight decrease in acreage was observed from 2016 to 2018. The baywide coverage was estimated to be 40,618 acres as of 2018 (Figure \reffig:sgacre)). As in 2016, total seagrass coverage remains above both the baywide target (38,000 acres) and the total estimated historic seagrass coverage of the 1950s (40,420 acres). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event that plagued the region throughout 2018 (note: the 2018 coverage estimate for Tampa Bay was developed prior to the red tide affecting the Bay). More information on the Bay's seagrass recovery utilizing transect monitoring data can also be found in \href{(https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf}{TBEP Technical Publication \#08\-16}.
-\end{minipage}
-\begin{minipage}{0.35\textwidth}
-\includegraphics[width=\textwidth]{www/Seagrass_Acreage_1950_2018.png}
-\end{minipage}
+\vspace{-0.375in}
 
+\begin{block}{Tampa Bay Seagrass Recovery}
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+Tampa Bay's total seagrass coverage continues to remain above the recovery goal, though a slight decrease was observed from 2016 to 2018. The baywide coverage was estimated at 40,618 acres as of 2018 (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above both the baywide target (38,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). The next SWFWMD coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event observed throughout 2018 (note: the 2018 coverage estimate was developed prior this event). More information can be found in \href{(https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf}{TBEP Technical Publication \#08\-16}.
+\end{minipage}
+\hspace{0.01in}
+\begin{minipage}{0.45\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -2cm]{www/Seagrass_Acreage_1950_2018.png}
+\caption{\footnotesize Historic seagrass acreage estimates for Tampa Bay from 1950-2018 (Source: TBEP \& SWFMD)}
+\label{fig:sgtrnd}
+\end{figure}
+\end{minipage}
 \end{block}
 
-% \vspace{-0.25cm}
+\vspace{0.1in}
 
-\footnotesize \textit{\textbf{Additional info}:  2019 nutrient management compliance assessment available from Sherwood, E., Burke, M. 2019. \href{http://www.tbeptech.org/TBEP_TECH_PUBS/2019/TBEP_11-19_TBNMC_2018_RA_Annual_Assessment.pdf}{TBEP Technical Report \#11\-19}.} \\
+\footnotesize \textit{\textbf{Additional info}: 2019 nutrient management compliance assessment available from Sherwood, E., Burke, M. 2019. \href{http://www.tbeptech.org/TBEP_TECH_PUBS/2019/TBEP_11-19_TBNMC_2018_RA_Annual_Assessment.pdf}{TBEP Technical Report \#11\-19}.} \\
 
 \end{column}
 
