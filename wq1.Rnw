@@ -21,6 +21,7 @@
 \usepackage{color, colortbl}
 
 \setcounter{figure}{1}
+\renewcommand{\arraystretch}{1.35}
 
 \title{\Large 2019 Tampa Bay Water Quality Assessments}
 \author{\normalsize A Tampa Bay Estuary Program Initiative to Maintain and Restore the Bay's Seagrass Resources}
@@ -64,16 +65,16 @@ g_legend<-function(a.gplot){
 
 \begin{frame}
 
-\vspace{-0.2cm} %spacing for block distance from header
+\vspace{-0.4cm} %spacing for block distance from header
 \begin{columns}[t]
 % \hspace{0.4cm}
 
 %%%%%%%%%%%%%%
 % left
 %%%%%%%%%%%%%%
-\begin{column}{.32\linewidth}
+\begin{column}{.34\linewidth}
 
-\vspace{-0.1in}
+\vspace{-0.2in}
 <<attainmat, echo = F, fig = F, include = F>>=
 p <- show_matrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) + 
   theme(
@@ -83,7 +84,7 @@ p <- show_matrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
     plot.title = element_text(colour = 'white', size = 26)
   ) + 
   ggtitle("Historic results:")
-pdf(here('figure', 'attainmat.pdf'), family = 'serif', height = 15, width = 4.5)
+pdf(here('figure', 'attainmat.pdf'), family = 'serif', height = 14.25, width = 4.5)
 p
 dev.off()
 @
@@ -99,11 +100,11 @@ dev.off()
 %%%%%%%%%%%%%%
 % right
 %%%%%%%%%%%%%%    
-\begin{column}{.63\linewidth}
+\begin{column}{.65\linewidth}
 
 \begin{block}{Background}
 \begin{minipage}{0.5\textwidth}
-\scriptsize
+\footnotesize
 Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure 1) and reduce light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity). 
 \end{minipage}
 \hspace{0.01in}
@@ -114,7 +115,7 @@ Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Manag
 
 \begin{block}{Decision Support Approach}
 \begin{minipage}{0.5\textwidth}
-\scriptsize
+\footnotesize
 Year to year algae abundance (measured as chlorophyll-a concentrations) and visible light penetration through the water column (depth of secchi disk visibility) have been identified as critical water quality indicators in Tampa Bay. Tracking the attainment of bay segment specific targets for these indicators provides the framework for developing and initiating bay management actions. TBEP management actions adopted in response to the annually-assessed decision support results are shown to the right.
 \end{minipage}
 \hspace{0.01in}
@@ -125,20 +126,20 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 
 \begin{block}{\Sexpr{maxyr} Decision Matrix Results}
 \begin{minipage}{0.4\textwidth}
-\scriptsize
+\footnotesize
 Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). The nuisance alga, \textit{Pyrodinium bahamense}, was again reported in Old Tampa Bay (OTB) during the Summer and Fall \Sexpr{maxyr}, contributing to a small magnitude chlorophyll-a exceedance. In all bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figure \ref{fig:sitemap}). However, effective light penetration was supportive of seagrass in all bay segments (Table \ref{tab:segtab}).
 \end{minipage}
 \hspace{0.01in}
-\begin{minipage}{0.55\textwidth}
-\tiny
+\begin{minipage}{0.5\textwidth}
+\footnotesize
 <<results = 'asis', eval = T>>=
 tab <- anlz_yrattain(epcdata, yrsel = maxyr) %>% 
   mutate(outcome = paste0('\\cellcolor{', outcome, '}', outcome)) %>% 
   mutate_if(is.numeric, round, 2) %>% 
   column_to_rownames('bay_segment')
 
-cap.val <- paste0('{\\scriptsize Observed water quality indicators \\& recommended management outcomes for ', maxyr , '.}')
-cgrps <- c('\\parbox{1cm}{Chlorophyll-a (ug/L)}','\\parbox{1.5cm}{Effective Light Penetration ($m^{-1}$)}', '')
+cap.val <- paste0('{\\footnotesize Observed water quality indicators \\& recommended management outcomes for ', maxyr , '.}')
+cgrps <- c('Chl-a (ug/L)','\\parbox{1.5cm}{Effective Light Penetration ($m^{-1}$)}', '')
 
 latex(
   tab,
@@ -148,9 +149,9 @@ latex(
   cgroup = cgrps,
   n.cgroup = c(2, 2, 1),
   rowlabel = '\\parbox{0.5cm}{Bay segment}',
-  colheads = c(maxyr, 'target', maxyr, 'target', '\\parbox{0.5cm}{outcome}'),
+  colheads = c(maxyr, 'target', maxyr, 'target', '\\hspace{-0.3cm}\\parbox{0.7cm}{outcome}'),
   label = 'tab:segtab', 
-  col.just = rep('p{0.15in}', 6),
+  col.just = rep('p{0.25in}', 6),
   table.env = F 
   ) 
 @
@@ -171,7 +172,7 @@ thrthm <- theme(
     axis.title = element_blank(), 
     plot.title = element_text(size = 18, colour = txtcol), 
     legend.text = element_text(size = 12, colour = txtcol), 
-    axis.text.x = element_text(colour = txtcol, angle = 45, size = 10, hjust = 1)
+    axis.text.x = element_text(colour = txtcol, angle = 0, size = 10, hjust = 0.5)
   )
 sclx <- scale_x_continuous(breaks = seq(1975, maxyr, by = 5)) 
 p1 <- show_thrplot(epcdata, bay_segment = "OTB", thr = "chla", yrrng = yrrng) + sclx + thrthm
@@ -195,7 +196,7 @@ pB$widths[2:3] <- maxWidth
 pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 
-pdf(here('figure', 'thrplot.pdf'), family = 'serif', height = 7, width = 8)
+pdf(here('figure', 'thrplot.pdf'), family = 'serif', height = 7, width = 12)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
@@ -205,10 +206,11 @@ grid.arrange(
 dev.off()
 @
 
-\begin{column}{0.6\textwidth}
-
-\begin{figure}
-\centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1\linewidth]{figure/thrplot.pdf}}
+\begin{column}{0.67\textwidth}
+\vspace{-0.47cm}
+\begin{figure}[htbp]
+% \hspace*{2cm} 
+\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/thrplot.pdf}
 \caption{\footnotesize Historic chlorophyll-a annual averages for the four bay segments.}
 \label{fig:thrplot}
 \end{figure}
@@ -220,7 +222,8 @@ txtcol <- 'white'
 p <- show_sitemap(epcdata, yrsel = maxyr) + 
   theme(
     plot.background = element_rect(fill = NA, color = NA), 
-    axis.text = element_text(colour = txtcol)
+    axis.text = element_blank(), 
+    axis.ticks = element_blank()
   )
 
 pdf(here('figure', 'sitemap.pdf'), family = 'serif', height = 5, width = 4)
@@ -228,11 +231,11 @@ p
 dev.off()
 @
 
-\begin{column}{0.35\textwidth}
+\begin{column}{0.28\textwidth}
 
 \begin{figure}
-\centerline{\includegraphics[trim = 0cm 0cm 0cm -1.25cm, width=1\linewidth]{figure/sitemap.pdf}}
-\caption{\footnotesize Chlorophyll attainment outcomes by site for \Sexpr{maxyr}. Historic chlorophyll-a annual averages for the four bay segments.}
+\centerline{\includegraphics[trim = 0cm 0cm 0cm -1.25cm, width=1.1\linewidth]{figure/sitemap.pdf}}
+\caption{\footnotesize Chlorophyll attainment outcomes by site for \Sexpr{maxyr}.}
 \label{fig:sitemap}
 \end{figure}
 
@@ -240,9 +243,9 @@ dev.off()
 
 \end{columns}
 
-\vspace{-0.25cm}
+\vspace{-0.5cm}
 
-\footnotesize \textit{\textbf{Acknowledgments}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods provided in Janicki, A., Wade, D., Pribble, R.J. 2000. \href{https://www.tbeptech.org/TBEP_TECH_PUBS/2000/TBEP_04_00Chlor-A.pdf}{TBEP Technical Report \#04\-00}.} \\
+\tiny \textit{\textbf{Acknowledgments}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods in Janicki, A., Wade, D., Pribble, R.J. 2000. \href{https://www.tbeptech.org/TBEP_TECH_PUBS/2000/TBEP_04_00Chlor-A.pdf}{TBEP Technical Report \#04\-00}.} \\
 
 \end{column}
 
