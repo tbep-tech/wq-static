@@ -68,9 +68,9 @@ g_legend<-function(a.gplot){
 %%%%%%%%%%%%%%
 % left
 %%%%%%%%%%%%%%
-\begin{column}{.32\linewidth}
+\begin{column}{.34\linewidth}
 
-\vspace{-0.1in}
+\vspace{-0.13in}
 <<chlmat, echo = F, fig = F, include = F>>=
 p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
   theme(
@@ -80,7 +80,7 @@ p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
     plot.title = element_text(colour = 'white', size = 26)
   ) + 
   ggtitle("FDEP Criteria Met:")
-pdf(here('figure', 'chlmat.pdf'), family = 'serif', height = 15, width = 4.5)
+pdf(here('figure', 'chlmat.pdf'), family = 'serif', height = 14.25, width = 4.5)
 p
 dev.off()
 @
@@ -96,7 +96,7 @@ dev.off()
 %%%%%%%%%%%%%%
 % right
 %%%%%%%%%%%%%%    
-\begin{column}{.63\linewidth}
+\begin{column}{.65\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL compliance}
 \footnotesize
@@ -164,12 +164,12 @@ dev.off()
 \begin{block}{Tampa Bay Seagrass Recovery}
 \begin{minipage}{0.5\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage continues to remain above the recovery goal, though a slight decrease was observed from 2016 to 2018. The baywide coverage was estimated at 40,618 acres as of 2018 (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above both the baywide target (38,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). The next SWFWMD coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event observed throughout 2018 (note: the 2018 coverage estimate was developed prior this event). More information can be found in \href{(https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf}{TBEP Technical Publication \#08\-16}.
+Tampa Bay's total seagrass coverage remains above the recovery goal, though a slight decrease was observed from 2016 to 2018. The 20118 baywide coverage was estimated at 40,618 acres (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above both the target (38,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). The next SWFWMD coverage estimates will be developed from aerial photographs acquired over the winter 2019-20 period, following the extensive red tide event observed throughout 2018 (note: the 2018 coverage estimate was developed prior this event). More information can be found in \href{(https://tbeptech.org/TBEP_TECH_PUBS/2016/TBEP_08_16_2016_Seagrass_Transect_Summary_Report.pdf}{TBEP Technical Publication \#08\-16}.
 \end{minipage}
 \hspace{0.01in}
 \begin{minipage}{0.45\textwidth}
 \begin{figure}
-\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -2cm]{www/Seagrass_Acreage_1950_2018.png}
+\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -1cm]{www/Seagrass_Acreage_1950_2018.png}
 \caption{\footnotesize Historic seagrass acreage estimates for Tampa Bay from 1950-2018 (Source: TBEP \& SWFMD)}
 \label{fig:sgtrnd}
 \end{figure}
