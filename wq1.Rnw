@@ -196,7 +196,7 @@ pdf(here('figure', 'thrplot.pdf'), family = 'serif', height = 7, width = 12)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
-  arrangeGrob(pA, pB, ncol = 2),
+  arrangeGrob(pC, pD, ncol = 2),
   ncol = 1, heights = c(0.1, 1, 1)
 )
 dev.off()

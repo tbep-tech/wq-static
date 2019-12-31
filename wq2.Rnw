@@ -111,7 +111,7 @@ thrthm <- theme(
     axis.title = element_blank(),
     plot.title = element_text(size = 18, colour = txtcol),
     legend.text = element_text(size = 12, colour = txtcol),
-    axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0)
+    axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0.5)
   )
 
 p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr) + thrthm
@@ -139,7 +139,7 @@ pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.5, width = 8)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
-  arrangeGrob(pA, pB, ncol = 2),
+  arrangeGrob(pC, pD, ncol = 2),
   ncol = 1, heights = c(0.1, 1, 1)
 )
 dev.off()
