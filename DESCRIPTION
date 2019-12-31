@@ -4,15 +4,16 @@ Version: 0.0.1
 Imports:
   bookdown, 
   dplyr, 
-  htmltools,
   knitr, 
-  magrittr, 
-  patchwork, 
-  posterdown,
-  reactable,
   rmarkdown, 
   here, 
-  tbeptools
+  tbeptools, 
+  tibble,
+  ggplot2,
+  gridExtra,
+  Hmisc, 
+  tinytex,
+  pdftools
 Remotes: 
   tbep-tech/tbeptools
   

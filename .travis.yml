@@ -9,9 +9,7 @@ apt_packages:
 git:
   depth: false
 script:
-- Rscript -e 'rmarkdown::render("wq.Rmd")'
-- Rscript -e 'rmarkdown::render("wq1.Rmd")'
-- Rscript -e 'rmarkdown::render("wq2.Rmd")'
+- Rscript -e 'source("build.R")'
 - git config --global user.name "fawda123"
 - git config --global user.email "mbafs2012@gmail.com"
 - git pull https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:${TRAVIS_BRANCH}
@@ -22,7 +20,6 @@ notifications:
   email:
     recipients:
     - mbafs2012@gmail.com
-    - ben@ecoquants.com
     on_success: change
     on_failure: change
 env:
