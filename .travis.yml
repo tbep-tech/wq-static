@@ -6,6 +6,7 @@ apt_packages:
   - libgdal-dev
   - libgeos-dev
   - libproj-dev
+  - libpoppler-cpp-dev
 git:
   depth: false
 script:
