@@ -71,9 +71,9 @@ g_legend<-function(a.gplot){
 p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
   theme(
     plot.background = element_rect(fill = NA, color = NA), 
-    axis.text.y = element_text(size = 16, colour = 'white'), 
-    axis.text.x = element_text(size = 20, colour = 'white'), 
-    plot.title = element_text(colour = 'white', size = 26)
+    axis.text.y = element_text(size = 16, colour = 'black'), 
+    axis.text.x = element_text(size = 20, colour = 'black'), 
+    plot.title = element_text(colour = 'black', size = 26)
   ) + 
   ggtitle("FDEP Criteria Met:")
 pdf(here('figure', 'chlmat.pdf'), family = 'serif', height = 14.25, width = 4.5)
@@ -106,7 +106,7 @@ Chlorophyll-a concentrations were evaluated within the bay on a monthly basis du
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
 yrrng <- c(1975, maxyr)
-txtcol <- 'white'
+txtcol <- 'black'
 thrthm <- theme(
     plot.background = element_rect(fill = NA, color = NA),
     axis.text.y = element_text(colour = txtcol, size = 12),
