@@ -43,9 +43,11 @@ library(gridExtra)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
+# xlsx <- 'T:/03_BOARDS_COMMITTEES/05_TBNMC/BAY_TARGETS/2019_update/data-raw/epchc.xlsx'
 xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
+# epcdata <- read_importwq(xlsx, download_latest_epchc = F, tryurl = T, connecttimeout = 20)
 epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
 maxyr <- 2019
 
@@ -123,7 +125,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \begin{block}{\Sexpr{maxyr} Decision Matrix Results}
 \begin{minipage}{0.4\textwidth}
 \footnotesize
-Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). The nuisance alga, \textit{Pyrodinium bahamense}, was again reported in Old Tampa Bay (OTB) during the Summer and Fall \Sexpr{maxyr}, contributing to a large magnitude chlorophyll-a exceedance. In other bay segments, separate algal bloom events contributed to individual stations exceeding the bay segment chlorophyll-a targets (Figure \ref{fig:sitemap}). However, effective light penetration was supportive of seagrass in all bay segments (Table \ref{tab:segtab}).
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). The nuisance alga, \textit{Pyrodinium bahamense}, was again reported in Old Tampa Bay (OTB) during the Summer and Fall \Sexpr{maxyr}, contributing to a large magnitude and duration  (5 yrs) chlorophyll-a exceedance. However, effective light penetration was observed to be supportive of seagrass in all bay segments (Table \ref{tab:segtab}).
 \end{minipage}
 \hspace{0.01in}
 \begin{minipage}{0.5\textwidth}
