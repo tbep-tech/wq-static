@@ -68,7 +68,7 @@ g_legend<-function(a.gplot){
 
 \vspace{-0.13in}
 <<chlmat, echo = F, fig = F, include = F>>=
-p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5) +
+p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5, abbrev = T) +
   theme(
     plot.background = element_rect(fill = NA, color = NA), 
     axis.text.y = element_text(size = 16, colour = 'black'), 
