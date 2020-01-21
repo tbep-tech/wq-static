@@ -65,7 +65,6 @@ g_legend<-function(a.gplot){
 
 \vspace{-0.4cm} %spacing for block distance from header
 \begin{columns}[t]
-% \hspace{0.4cm}
 
 %%%%%%%%%%%%%%
 % left
