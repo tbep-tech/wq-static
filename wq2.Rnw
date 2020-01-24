@@ -67,7 +67,7 @@ g_legend<-function(a.gplot){
 
 \vspace{-0.2in}
 <<chlmat, echo = F, fig = F, include = F>>=
-p <- show_chlmatrix(epcdata, yrrng = c(1975, maxyr), txtsz = 5, abbrev = T) +
+p <- show_wqmatrix(epcdata, param = 'chla', yrrng = c(1975, maxyr), txtsz = 5, abbrev = T) +
   theme(
     plot.background = element_rect(fill = NA, color = NA),
     axis.text.y = element_text(size = 14, colour = 'black'),
@@ -136,7 +136,7 @@ pB$widths[2:3] <- maxWidth
 pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 
-pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.8, width = 8)
+pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.9, width = 8)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
@@ -173,7 +173,7 @@ Tampa Bay's total seagrass coverage remains above the recovery goal, though a sl
 \end{minipage}
 \end{block}
 
-\vspace{-0.12in}
+\vspace{-0.05in}
 
 \tiny \textit{\textbf{Note}: 2019 nutrient management compliance assessment available from Sherwood, E., Burke, M. 2019. \href{http://www.tbeptech.org/TBEP_TECH_PUBS/2019/TBEP_11-19_TBNMC_2018_RA_Annual_Assessment.pdf}{TBEP Technical Report \#11-19}.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2020. 2019 Tampa Bay Water Quality Assessment. Tampa Bay Estuary Program Technical Report \#01-20, St. Petersburg, FL.} \\
 
