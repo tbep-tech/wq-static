@@ -25,7 +25,6 @@
 
 \title{\Large 2019 Tampa Bay Water Quality Assessments}
 \author{\normalsize A Tampa Bay Estuary Program Initiative to Maintain and Restore the Bay's Seagrass Resources}
- text
  
 <<setup, echo = F, warning = F, message = F, eval = T, results = 'hide'>>=
 knitr::opts_chunk$set(echo = F, message = F, warning = F, eval = T)
