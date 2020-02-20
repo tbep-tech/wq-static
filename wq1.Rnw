@@ -108,7 +108,7 @@ Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Manag
 \hspace{0.1in}
 \begin{minipage}{0.45\textwidth}
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{www/nitro.PNG}
+\includegraphics[width=0.9\textwidth]{www/nitro.jpg}
 \caption{\footnotesize Seagrass restoration with N management.}
 \label{fig:nitro}
 \end{figure}
