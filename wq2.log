@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  23 MAR 2020 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.24)  24 MAR 2020 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1122,7 +1122,7 @@ xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/travis/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></home/travis/texlive/texmf-dist/fo
 nts/type1/urw/helvetic/uhvr8a.pfb></home/travis/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on wq2.pdf (1 page, 675465 bytes).
+Output written on wq2.pdf (1 page, 675494 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
