@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.11)  11 APR 2020 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  12 APR 2020 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **wq2.tex
 (./wq2.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06> (/home/travis/texlive/texmf-dist/tex/latex/be
+L3 programming layer <2020-04-06> (/home/travis/texlive/texmf-dist/tex/latex/be
 amer/beamer.cls
 Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
 (/home/travis/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/home/tr
@@ -1109,10 +1109,10 @@ Package rerunfilecheck Info: File `wq2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20774 strings out of 482556
- 382783 string characters out of 5952015
- 682252 words of memory out of 5000000
- 35849 multiletter control sequences out of 15000+600000
+ 20774 strings out of 482555
+ 382783 string characters out of 5951981
+ 682289 words of memory out of 5000000
+ 35850 multiletter control sequences out of 15000+600000
  565626 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,22n,79p,983b,1160s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1121,7 +1121,7 @@ xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></home/travis/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></home/travis/texlive/texmf-dist/fo
 nts/type1/urw/helvetic/uhvr8a.pfb></home/travis/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on wq2.pdf (1 page, 675471 bytes).
+Output written on wq2.pdf (1 page, 675486 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
