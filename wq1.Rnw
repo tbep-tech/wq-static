@@ -47,8 +47,8 @@ library(gridExtra)
 xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest_epchc = F, tryurl = T, connecttimeout = 20)
-epcdata <- read_importwq(xlsx, download_latest_epchc = T, tryurl = T, connecttimeout = 20)
+# epcdata <- read_importwq(xlsx, download_latest = F)
+epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2019
 
 # get legend from an existing ggplot object

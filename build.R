@@ -20,3 +20,6 @@ tinytex::pdflatex('wq2.tex')
 
 # combine into single page
 pdftools::pdf_combine(c('wq1.pdf', 'wq2.pdf'), 'wq.pdf')
+
+fimcsv <- xlsx <- here('data-raw', 'fimraw.csv')
+fimdat <- read_importfim(fimcsv, download_latest = T)
