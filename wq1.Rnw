@@ -37,7 +37,7 @@ library(Hmisc)
 library(gridExtra)
 
 # remotes::install_github("tbep-tech/tbeptools")
-devtools::load_all('../tbeptools/.')
+# devtools::load_all('../tbeptools/.')
 
 # local file path
 # xlsx <- 'T:/03_BOARDS_COMMITTEES/05_TBNMC/BAY_TARGETS/2019_update/data-raw/epchc.xlsx'
