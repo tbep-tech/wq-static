@@ -19,6 +19,20 @@
 \usepackage[latin1]{inputenc}
 \usepackage[orientation=landscape,size=custom,width=21.59,height=27.94,scale=0.45]{beamerposter} % in cm, equal to 8.5" wide x 11" high
 \usepackage{color, colortbl}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% for watermark using tikz
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=red,opacity=0.3]\node{DRAFT};}
+\newwatermark*[
+  allpages,
+  angle=45,
+  scale=6,
+  xpos=-20,
+  ypos=15
+]{\usebox\mybox}
 
 \setcounter{figure}{4}
 

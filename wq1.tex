@@ -69,6 +69,20 @@
 \usepackage[latin1]{inputenc}
 \usepackage[orientation=landscape,size=custom,width=21.59,height=27.94,scale=0.45]{beamerposter} % in cm, equal to 8.5" wide x 11" high
 \usepackage{color, colortbl}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% for watermark using tikz
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=red,opacity=0.3]\node{DRAFT};}
+\newwatermark*[
+  allpages,
+  angle=45,
+  scale=6,
+  xpos=-20,
+  ypos=15
+]{\usebox\mybox}
 
 % \setcounter{figure}{1}
 \renewcommand{\arraystretch}{1.35}
@@ -153,10 +167,10 @@ Water quality (chlorophyll-a and light penetration) remained supportive of seagr
 \cline{2-3} \cline{5-6}
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{2020}&\multicolumn{1}{c}{target}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{2020}&\multicolumn{1}{c}{target}\tabularnewline
 \hline
-\cellcolor{yellow}OTB&$~9.5$&$~8.5$&&$0.68$&$0.83$\tabularnewline
-\cellcolor{green}HB&$10.4$&$13.2$&&$0.96$&$1.58$\tabularnewline
-\cellcolor{green}MTB&$~6.1$&$~7.4$&&$0.53$&$0.83$\tabularnewline
-\cellcolor{green}LTB&$~3.6$&$~4.6$&&$0.57$&$0.63$\tabularnewline
+\cellcolor{yellow}OTB&$9.8$&$~8.5$&&$0.69$&$0.83$\tabularnewline
+\cellcolor{green}HB&$9.8$&$13.2$&&$0.95$&$1.58$\tabularnewline
+\cellcolor{green}MTB&$5.9$&$~7.4$&&$0.52$&$0.83$\tabularnewline
+\cellcolor{green}LTB&$3.6$&$~4.6$&&$0.57$&$0.63$\tabularnewline
 \hline
 \end{tabular}\end{center}
 \end{table}
