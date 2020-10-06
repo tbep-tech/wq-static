@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.5)  5 OCT 2020 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.6)  6 OCT 2020 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **wq1.tex
 (./wq1.tex
 LaTeX2e <2020-10-01>
-L3 programming layer <2020-09-24> xparse <2020-03-03> (/home/travis/texlive/tex
+L3 programming layer <2020-10-05> xparse <2020-03-03> (/home/travis/texlive/tex
 mf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2020/07/22 v3.59 A class for typesetting presentations
 (/home/travis/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/home/tr
 avis/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count175
 )
 \beamer@tempbox=\box47
@@ -108,7 +108,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 (/home/travis/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
@@ -947,9 +947,9 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 l.95 \begin{document}
                       
 Here is how much of TeX's memory you used:
- 26536 strings out of 481865
- 509400 string characters out of 5931125
- 883695 words of memory out of 5000000
+ 26536 strings out of 481864
+ 509400 string characters out of 5931107
+ 884443 words of memory out of 5000000
  42319 multiletter control sequences out of 15000+600000
  535693 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
