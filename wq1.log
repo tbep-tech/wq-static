@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.7)  7 OCT 2020 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.8)  8 OCT 2020 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,9 +689,9 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@cols=\count330
 \TX@ftn=\toks45
 ) (/home/travis/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/10/03 3.49 The Babel package
+Package: babel 2020/10/06 3.50 The Babel package
 (/home/travis/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/10/03 3.49 Babel common definitions
+File: babel.def 2020/10/06 3.50 Babel common definitions
 \babel@savecnt=\count331
 \U@D=\dimen314
 \l@babelnohyphens=\language3
