@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.9)  9 OCT 2020 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.10)  10 OCT 2020 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **wq1.tex
 (./wq1.tex
-LaTeX2e <2020-10-01>
+LaTeX2e <2020-10-01> patch level 1
 L3 programming layer <2020-10-05> xparse <2020-03-03> (/home/travis/texlive/tex
 mf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2020/07/22 v3.59 A class for typesetting presentations
@@ -356,7 +356,7 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/home/travis/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/home/travis/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen257
 \Hy@linkcounter=\count283
@@ -947,10 +947,10 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 l.95 \begin{document}
                       
 Here is how much of TeX's memory you used:
- 26536 strings out of 481864
- 509400 string characters out of 5931107
- 884443 words of memory out of 5000000
- 42319 multiletter control sequences out of 15000+600000
+ 26536 strings out of 481865
+ 509400 string characters out of 5931123
+ 884457 words of memory out of 5000000
+ 42318 multiletter control sequences out of 15000+600000
  535693 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  95i,7n,99p,481b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
