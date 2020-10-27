@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.26)  26 OCT 2020 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.27)  27 OCT 2020 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **wq1.tex
 (./wq1.tex
-LaTeX2e <2020-10-01> patch level 1
+LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-05> xparse <2020-03-03> (/home/travis/texlive/tex
 mf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2020/07/22 v3.59 A class for typesetting presentations
@@ -618,9 +618,9 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 ) (/home/travis/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 (/home/travis/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/09/12 v3.5b Customizing captions (AR)
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (/home/travis/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen286
 \captionmargin@=\dimen287
 \captionwidth=\dimen288
@@ -947,10 +947,10 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 l.95 \begin{document}
                       
 Here is how much of TeX's memory you used:
- 26537 strings out of 481865
- 509404 string characters out of 5931123
- 884279 words of memory out of 5000000
- 42319 multiletter control sequences out of 15000+600000
+ 26553 strings out of 481866
+ 509759 string characters out of 5931147
+ 885419 words of memory out of 5000000
+ 42334 multiletter control sequences out of 15000+600000
  535693 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  107i,7n,111p,481b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
