@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.30)  30 OCT 2020 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.31)  31 OCT 2020 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,10 +947,10 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 l.95 \begin{document}
                       
 Here is how much of TeX's memory you used:
- 26558 strings out of 481445
- 509846 string characters out of 5920829
- 888603 words of memory out of 5000000
- 42762 multiletter control sequences out of 15000+600000
+ 26558 strings out of 481433
+ 509846 string characters out of 5920374
+ 888723 words of memory out of 5000000
+ 42774 multiletter control sequences out of 15000+600000
  535693 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  107i,7n,111p,481b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
