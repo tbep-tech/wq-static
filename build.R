@@ -1,3 +1,4 @@
+tinytex::reinstall_tinytex()
 
 # put current year here
 maxyr <- 2020
