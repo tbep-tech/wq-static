@@ -1,5 +1,5 @@
 # README
 
-[![Travis-CI Build Status](https://travis-ci.org/tbep-tech/wq-static.svg?branch=master)](https://travis-ci.org/tbep-tech/wq-static)
+[![R-CMD-check](https://github.com/tbep-tech/wq-static/workflows/build/badge.svg)](https://github.com/tbep-tech/wq-static/actions)
 
 Repository for building static water quality reporting tool documents. 
