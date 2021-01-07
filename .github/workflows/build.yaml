@@ -19,6 +19,10 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-tinytex@master
+      - name: Install macOS dependencies for tbeptools
+        run: |
+          brew install cairo
+          brew install gdal
       - name: Install dependencies
         run: |
           install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
