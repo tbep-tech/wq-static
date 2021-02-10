@@ -102,7 +102,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/attainmat.pdf}}
-\caption{\footnotesize Decision matrix results for 1975 to \Sexpr{maxyr}.}
+\caption{\footnotesize Decision matrix results for 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
 \label{fig:attainmat}
 \end{figure}
 
@@ -145,7 +145,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). The nuisance alga, \textit{Pyrodinium bahamense}, was again reported in Old Tampa Bay (OTB) during May - September 2019, contributing to a large magnitude chlorophyll-a exceedance that has persisted for a long duration (5yrs). However, it should be noted that effective light penetration was still observed to be supportive of seagrass in all bay segments, including OTB (Table \ref{tab:segtab}).
+Water quality (chlorophyll-a and light penetration) remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). The nuisance alga, \textit{Pyrodinium bahamense}, was again reported in Old Tampa Bay (OTB) during June - Sept 2020, contributing to a large magnitude chlorophyll-a exceedance that has persisted for a long duration (6 yrs). However, it should be noted that effective light penetration was still observed to be supportive of seagrass in all bay segments, including OTB (Table \ref{tab:segtab}).
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}
@@ -269,7 +269,7 @@ dev.off()
 
 \vspace{-0.4cm}
 
-\tiny \textit{\textbf{Note}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods in Janicki et al. 2000. \href{https://drive.google.com/file/d/1XMULU8w4syWcSv_ciOUOhnC_G4xt6GIF/view?usp=drivesdk}{TBEP Technical Report \#04\-00}. Points in map above show site-specific attainment of a bay segment target and are for reference only.} \\
+\tiny \textit{\textbf{Note}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods in Janicki et al. 2000. \href{https://drive.google.com/file/d/1XMULU8w4syWcSv_ciOUOhnC_G4xt6GIF/view?usp=drivesdk}{TBEP Technical Report \#04-00}. Points in map above show site-specific attainment of a bay segment target and are for reference only.} \\
 
 \end{column}
 
