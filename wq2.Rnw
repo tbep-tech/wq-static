@@ -163,7 +163,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1\linewidth]{figure/chlboxplot.pdf}}
-\caption{\footnotesize Chlorophyll-a monthly averages from 1975-\Sexpr{maxyr - 1} for the four bay segments. The monthly averages for \Sexpr{ maxyr} are shown in red.Historic chlorophyll-a annual averages for the four bay segments.}
+\caption{\footnotesize Chlorophyll-a monthly averages from 1975-\Sexpr{maxyr - 1} for the four bay segments. The monthly averages for \Sexpr{ maxyr} are shown in red.}
 \label{fig:chlboxplot}
 \end{figure}
 
