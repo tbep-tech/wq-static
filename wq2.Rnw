@@ -173,7 +173,7 @@ dev.off()
 \vspace{-0.15in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage remains above the recovery goal, though a slight decrease was observed from 2016 to 2018. The 2018 baywide coverage was estimated at 40,652 acres (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above the target (38,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). SWFWMD coverage estimates from the winter 2019-20 period will be available in spring 2021. More information on assessments of the bay's seagrass recovery using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrasscoverage-dash/}{https://shiny.tbep.org/seagrasscoverage-dash/}.
+Tampa Bay's total seagrass coverage remains above the recovery goal, though a slight decrease was observed from 2016 to 2018. The 2018 baywide coverage was estimated at 40,652 acres (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above the target (40,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). SWFWMD coverage estimates from the winter 2019-20 period will be available in spring 2021. More information on assessments of the bay's seagrass recovery using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrasscoverage-dash/}{https://shiny.tbep.org/seagrasscoverage-dash/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
