@@ -188,7 +188,7 @@ Tampa Bay's total seagrass coverage remains above the recovery goal, though a sl
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: 2020 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2020. TBEP Technical Report \#06-21.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2021. 2020 Tampa Bay Water Quality Assessment. TBEP Technical Report \#05-21, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2020 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2021. TBEP Technical Report \#06-21.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2021. 2020 Tampa Bay Water Quality Assessment. TBEP Technical Report \#05-21, St. Petersburg, FL.} \\
 
 \end{column}
 
