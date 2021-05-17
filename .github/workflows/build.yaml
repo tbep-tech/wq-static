@@ -21,10 +21,10 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@master
       - name: Install macOS dependencies for tbeptools
         run: |
+          brew reinstall gcc
           brew install cairo
           brew install gdal
           brew install udunits
-          brew reinstall gcc
       - name: Install dependencies
         run: |
           install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
