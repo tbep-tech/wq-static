@@ -22,7 +22,6 @@ jobs:
       - name: Install macOS dependencies for tbeptools
         run: |
           rm -rf /usr/local/bin/gfortran
-          brew reinstall gcc
           brew install cairo
           brew install gdal
           brew install udunits
