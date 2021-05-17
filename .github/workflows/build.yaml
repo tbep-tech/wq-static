@@ -21,6 +21,7 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@master
       - name: Install macOS dependencies for tbeptools
         run: |
+          rm -rf /usr/local/bin/gfortran
           brew reinstall gcc
           brew install cairo
           brew install gdal
