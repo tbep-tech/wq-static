@@ -24,6 +24,7 @@ jobs:
           brew install cairo
           brew install gdal
           brew install udunits
+          brew reinstall gcc
       - name: Install dependencies
         run: |
           install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
