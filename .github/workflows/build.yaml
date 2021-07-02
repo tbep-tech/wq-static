@@ -11,7 +11,7 @@ name: build
 jobs:
   render:
     name: build
-    runs-on: macOS-latest
+    runs-on: ubuntu-20.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -19,12 +19,17 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-tinytex@master
-      - name: Install macOS dependencies for tbeptools
+      - name: Install ubuntu dependencies
         run: |
-          rm -rf /usr/local/bin/gfortran
-          brew install cairo
-          brew install gdal
-          brew install udunits
+          sudo apt-get install libcurl4-gnutls-dev 
+          sudo apt-get install libcairo2-dev 
+          sudo apt-get install libxt-dev 
+          sudo apt-get install libssl-dev 
+          sudo apt-get install libssh2-1-dev 
+          sudo apt-get install libudunits2-dev 
+          sudo apt-get install libgdal-dev 
+          sudo apt-get install libgeos-dev 
+          sudo apt-get install libproj-dev
       - name: Install dependencies
         run: |
           install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "ggmap", "ggsn", "ggrepel", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
