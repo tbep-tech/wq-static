@@ -27,8 +27,9 @@ jobs:
           brew install udunits
       - name: Install dependencies
         run: |
-          install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
-          remotes::install_github("tbep-tech/tbeptools")
+          install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "ggmap", "ggsn", "ggrepel", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
+          remotes::install_version('sf', version = '0.9-8')
+          remotes::install_github('tbep-tech/tbeptools')
         shell: Rscript {0}
       - name: Build report card
         run: Rscript -e 'source("build.R")'
