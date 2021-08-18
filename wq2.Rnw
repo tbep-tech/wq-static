@@ -81,7 +81,7 @@ g_legend<-function(a.gplot){
 
 \vspace{-0.2in}
 <<chlmat, echo = F, fig = F, include = F>>=
-p <- show_wqmatrix(epcdata, param = 'chla', yrrng = c(1975, maxyr), txtsz = 5, abbrev = T, partialyr = F) +
+p <- show_wqmatrix(epcdata, param = 'chla', yrrng = c(1975, maxyr), txtsz = 5, abbrev = T, partialyr = T) +
   theme(
     plot.background = element_rect(fill = NA, color = NA),
     axis.text.y = element_text(size = 14, colour = 'black'),
@@ -128,12 +128,12 @@ thrthm <- theme(
     axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0.5)
   )
 
-p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr, partialyr = F) + thrthm
+p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr, partialyr = T) + thrthm
 p1leg <- g_legend(p1)
 p1 <- p1 + theme(legend.position = 'none')
-p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr, partialyr = F) + thrthm + theme(legend.position = 'none')
-p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr, partialyr = F) + thrthm + theme(legend.position = 'none')
-p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr, partialyr = F) + thrthm + theme(legend.position = 'none')
+p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr, partialyr = T) + thrthm + theme(legend.position = 'none')
+p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr, partialyr = T) + thrthm + theme(legend.position = 'none')
+p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr, partialyr = T) + thrthm + theme(legend.position = 'none')
 
 # align
 # Get the widths
