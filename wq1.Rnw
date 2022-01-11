@@ -118,7 +118,7 @@ dev.off()
 \begin{minipage}{0.5\textwidth}
 \vspace{-0.2in}
 \footnotesize
-Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure \ref{fig:nitro}) and reduce light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity).
+Light availability to seagrass is the guiding paradigm for TBEP's Nitrogen Management Strategy. Because excessive nitrogen loads to the bay generally lead to increased algae blooms (higher chlorophyll-a levels) (Figure \ref{fig:nitro}) and reduced light penetration to seagrass, an evaluation method was developed to assess whether load reduction strategies are achieving desired water quality results (i.e. reduced chlorophyll-a concentrations and increased water clarity).
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.45\textwidth}
