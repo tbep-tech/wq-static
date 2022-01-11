@@ -23,6 +23,10 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 
+% color links
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
 % % for watermark using tikz
 % \newsavebox\mybox
 % \savebox\mybox{\tikz[color=red,opacity=0.3]\node{DRAFT};}
@@ -174,7 +178,7 @@ dev.off()
 \vspace{-0.15in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage fell below the 40,000 acre recovery goal within the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update} with the most recent assessment data from SWFWMD. The 2020 baywide estimate was 34,298 acres, representing a decrease of 6,354 acres from 2018 (Figure \ref{fig:sgtrnd}). Large decreases were observed in Old Tampa Bay, especially in the Feather Sound area. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in the Feather Sound region and elsewhere. Research and management plans are currently being developed to address these losses. More information on assessments of the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+2020 results showed that Tampa Bay's seagrass coverage fell below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2020 baywide estimate was 34,298 acres, representing a decrease of 6,354 acres from 2018 (Figure \ref{fig:sgtrnd}). Large decreases were observed in Old Tampa Bay, especially in the Feather Sound area. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in this region and elsewhere. Research and management plans are currently being developed to address these losses. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
