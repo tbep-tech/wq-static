@@ -109,7 +109,7 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize During 2020, the COVID-19 pandemic precluded water quality data collection in April and May. As a result, compliance determinations have not been made for any bay segments. Results shown in Figure \ref{fig:chlmat} depict chlorophyll-a concentrations in relation to regulatory criteria, as calculated without observations from the months noted above. The fourth RA annual assessment report for the 2017-2021 period will be submitted in April 2021.
+\footnotesize In 2021, all bay segments met FDEP criteria for chlorophyll, except Old Tampa Bay. The criteria was exceeded for the third year in a row, requiring additional actions by the Tampa Bay Nitrogen Management Consortium to ensure water quality criteria are met under the 2017 Reasonable Assurance Update (RA Update).  The fifth RA annual assessment report for the 2017-2021 period will be submitted in April 2022.  Additionally, unanticipated release of legacy fertilizer process water and mixed seawater from the Piney Point facility in the spring introduced an estimated 205 tons of nitrogen to Lower Tampa Bay.  A subsequent red tide event occurred in Middle and Lower Tampa Bay later in the summer.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
@@ -150,7 +150,7 @@ pB$widths[2:3] <- maxWidth
 pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 
-pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 6.5, width = 8)
+pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 6.15, width = 8)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
@@ -174,22 +174,22 @@ dev.off()
 \vspace{-0.15in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage remains above the recovery goal, though a slight decrease was observed from 2016 to 2018. The 2018 baywide coverage was estimated at 40,652 acres (Figure \ref{fig:sgtrnd}). As in 2016, coverage remains above the target (40,000 acres) and the estimated historic coverage of the 1950s (40,420 acres). SWFWMD coverage estimates from the winter 2019-20 period will be available in spring 2021. More information on assessments of the bay's seagrass recovery using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrasscoverage-dash/}{https://shiny.tbep.org/seagrasscoverage-dash/}.
+Tampa Bay's total seagrass coverage fell below the recovery goal with the most recent assessment data from SWFWMD. The 2020 baywide estimate was 34,298 acres, representing a decrease of 6,354 acres from 2018 (Figure \ref{fig:sgtrnd}). Large decreases were observed in Old Tampa Bay, especially in the Feather Sound area. The baywide target was also increased in 2020 to 40,000 acres with the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. Research and management plans are currently being developed to address these losses.  More information on assessments of the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
 \vspace{0.1in}
 \begin{figure}
-\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -1cm]{www/Seagrass_Acreage_1950_2018.png}
-\caption{\footnotesize Seagrass estimates from 1950-2018 (Source: TBEP \& SWFWMD)}
+\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png}
+\caption{\footnotesize Seagrass estimates from 1950-2020 (Source: TBEP \& SWFWMD)}
 \label{fig:sgtrnd}
 \end{figure}
 \end{minipage}
 \end{block}
 
-\vspace{-0.1in}
+\vspace{-0.15in}
 
-\tiny \textit{\textbf{Note}: 2020 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2021. TBEP Technical Report \#06-21.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2021. 2020 Tampa Bay Water Quality Assessment. TBEP Technical Report \#05-21, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2021 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2022. TBEP Technical Report \#xx-22.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2022. 2021 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-22, St. Petersburg, FL.} \\
 
 \end{column}
 
