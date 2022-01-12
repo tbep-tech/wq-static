@@ -113,12 +113,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize In 2021, all bay segments met FDEP criteria for chlorophyll, except Old Tampa Bay. The criteria was exceeded for the third year in a row, requiring additional actions by the Tampa Bay Nitrogen Management Consortium to ensure water quality criteria are met under the 2017 Reasonable Assurance Update (RA Update).  The fifth RA annual assessment report for the 2017-2021 period will be submitted in April 2022.  Additionally, unanticipated release of legacy fertilizer process water and mixed seawater from the Piney Point facility in the spring introduced an estimated 205 tons of nitrogen to Lower Tampa Bay.  A subsequent red tide event occurred in Middle and Lower Tampa Bay later in the summer.
+\footnotesize In 2021, all bay segments met FDEP criteria for chlorophyll, except Old Tampa Bay. The criteria was exceeded for the third year in a row, requiring additional actions by the Tampa Bay Nitrogen Management Consortium to ensure water quality criteria are met under the 2017 Reasonable Assurance Update (RA Update).  The fifth RA annual assessment report for the 2017-2021 period will be submitted in April 2022.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Elevated concentrations in Old Tampa Bay were primarily due to \textit{Pyrodinium bahamense} during the late summer months.
+Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Elevated concentrations in Old Tampa Bay were primarily due to \textit{Pyrodinium bahamense} during the late summer months.  Additionally, unanticipated release of legacy fertilizer process water and mixed seawater from the Piney Point facility in the spring introduced an estimated 205 tons of nitrogen to Lower Tampa Bay.  A subsequent red tide event occurred in Middle and Lower Tampa Bay later in the summer.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
