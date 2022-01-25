@@ -101,7 +101,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/chlmat.pdf}}
-\caption{\footnotesize Attainment of bay segments for chlorophyll criteria from 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
+\caption{\footnotesize Bay segment attainment of chlorophyll criteria from 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
 \label{fig:chlmat}
 \end{figure}
 
@@ -193,7 +193,7 @@ dev.off()
 
 \vspace{-0.15in}
 
-\tiny \textit{\textbf{Note}: 2021 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2022. TBEP Technical Report \#xx-22.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2022. 2021 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-22, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2021 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2022. TBEP Technical Report \#xx-22.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2022. 2021 Tampa Bay Water Quality Assessment. TBEP Technical Report \#01-22, St. Petersburg, FL.} \\
 
 \end{column}
 
