@@ -26,4 +26,4 @@ Updating the wq dashboard with provisional data (wq-dash repo):
 1. In R/dat_proc.R, comment line 14, uncomment line 13, change line 20 to current year, run R/dat_proc.R
 1. In R/dat_build.R, comment lines 6 - 20 so CI actions don't overwrite epcdata
 
-Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  This can only be done once January data are available. 
+Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available. 
