@@ -15,7 +15,7 @@ For this repository:
 1. In wq1.Rnw comment lines 61, 65, uncomment lines 60, 64
 1. In wq2.Rnw comment lines 59, 63, uncomment lines 58, 62
 1. Run build.R
-1. Comment lines 1-7 on .github/workflows/build.yaml to disable CI 
+1. Comment lines 6-7, 19-48 on .github/workflows/build.yaml to disable CI (w/o error)
 1. Update text and any other static graphics
 
 Updating the wq dashboard with provisional data (wq-dash repo):
