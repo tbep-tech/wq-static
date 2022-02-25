@@ -12,8 +12,8 @@ For this repository:
 1. Take downloaded data from wq-static CI build ('Results_Updated.xls') and copy in provisional data from EPC
 1. Check if all data present, should be 10 samples in HB, 8 in LTB, 12 in MTB, 15 in OTB
 1. Save new file, 'Results_Provisional.xlsx' (okay to save as new file format), in data-raw folder
-1. In wq1.Rnw comment lines 58, 62, uncomment lines 57, 61, change line 64 to F
-1. In wq2.Rnw comment lines 55, 59, uncomment lines 54, 58, change line 61 to F
+1. In wq1.Rnw comment lines 61, 65, uncomment lines 60, 64
+1. In wq2.Rnw comment lines 59, 63, uncomment lines 58, 62
 1. Run build.R
 1. Comment lines 1-7 on .github/workflows/build.yaml to disable CI 
 1. Update text and any other static graphics

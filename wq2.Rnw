@@ -55,12 +55,12 @@ library(gridExtra)
 library(ggplot2)
 
 # local file path
-xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-# xlsx <- here('data-raw', 'Results_Updated.xls')
+# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-epcdata <- read_importwq(xlsx, download_latest = F)
 # epcdata <- read_importwq(xlsx, download_latest = F)
+epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2021
 partialyr <- F
 
