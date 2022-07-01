@@ -161,6 +161,11 @@ tab <- anlz_yrattain(epcdata, yrsel = maxyr, partialyr = partialyr) %>%
     chla_target = round(chla_target, 1),
     la_val = round(la_val, 2), 
     la_target = round(la_target, 2), 
+    outcome = case_when(
+      outcome == 'green' ~ '#2DC938',
+      outcome == 'yellow' ~ '#E9C318', 
+      outcome == 'red' ~ '#CC3231'
+    ),
     bay_segment = paste0('\\cellcolor{', outcome, '}', bay_segment)
   ) %>% 
   column_to_rownames('bay_segment') %>% 
