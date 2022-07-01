@@ -24,6 +24,9 @@
 \usepackage{tikz}
 
 \definecolor{links}{HTML}{2A1B81}
+\definecolor{tabgreen}{rgb}{0.18, 0.79, 0.22}
+\definecolor{tabyellow}{rgb}{0.91, 0.76, 0.09}
+\definecolor{tabred}{rgb}{0.80, 0.20, 0.19}
 \hypersetup{colorlinks,linkcolor=,urlcolor=links}
 
 % % for watermark using tikz
@@ -162,9 +165,9 @@ tab <- anlz_yrattain(epcdata, yrsel = maxyr, partialyr = partialyr) %>%
     la_val = round(la_val, 2), 
     la_target = round(la_target, 2), 
     outcome = case_when(
-      outcome == 'green' ~ '#2DC938',
-      outcome == 'yellow' ~ '#E9C318', 
-      outcome == 'red' ~ '#CC3231'
+      outcome == 'green' ~ 'tabgreen',
+      outcome == 'yellow' ~ 'tabyellow', 
+      outcome == 'red' ~ 'tabred'
     ),
     bay_segment = paste0('\\cellcolor{', outcome, '}', bay_segment)
   ) %>% 
