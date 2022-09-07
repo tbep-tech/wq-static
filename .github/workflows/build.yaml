@@ -31,9 +31,10 @@ jobs:
           sudo apt-get install libgeos-dev
           sudo apt-get install libproj-dev
           sudo apt-get install libpoppler-cpp-dev
+          sudo apt-get install libgit2-dev
       - name: Install dependencies
         run: |
-          install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "ggmap", "ggsn", "ggrepel", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools"))
+          install.packages(c("dplyr", "knitr", "remotes", "rmarkdown", "ggmap", "ggsn", "ggrepel", "here", "tibble", "ggplot2", "gridExtra", "Hmisc", "tinytex", "pdftools", "git2r"))
           remotes::install_version('sf', version = '0.9-8')
           remotes::install_github('tbep-tech/tbeptools')
         shell: Rscript {0}
@@ -44,5 +45,5 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -A
-          git commit -m 'Re-build data and run tests' || echo "No changes to commit"
+          git commit -m 'Re-build data' || echo "No changes to commit"
           git push origin || echo "No changes to commit"

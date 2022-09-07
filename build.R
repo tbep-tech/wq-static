@@ -24,4 +24,10 @@ pdftools::pdf_combine(c('wq1.pdf', 'wq2.pdf'), 'wq.pdf')
 # clean up intermediates
 torm <- list.files(pattern = '^wq1\\.pdf$|^wq2\\.pdf$|\\.nav$|\\.tex$|\\.toc$|\\.xwm$|\\.snm$')
 file.remove(torm)
-  
+
+# restore if epc data is not new
+unstaged <- unlist(git2r::status()$unstaged)
+if(!'data-raw/Results_Updated.xls' %in% unstaged){
+  system('git restore .')
+  cat('No data update, using git restore')
+}
