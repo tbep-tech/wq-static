@@ -50,14 +50,14 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F, eval = T)
 library(dplyr)
 library(knitr)
 library(here)
-library(tbeptools)
+# library(tbeptools)
 library(tibble)
 library(ggplot2)
 library(Hmisc)
 library(gridExtra)
 
 # remotes::install_github("tbep-tech/tbeptools")
-# devtools::load_all('../tbeptools/.')
+devtools::load_all('../tbeptools/.')
 
 # local file path
 # xlsx <- here('data-raw', 'Results_Provisional.xlsx')
