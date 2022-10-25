@@ -19,5 +19,5 @@ jobs:
       with:
         r-version: '3.5.3' # The R version to download (if necessary) and use.
     - uses: r-lib/actions/setup-pandoc@v2
-    - uses: r-lib/actions/setup-tinytex@master
+    - uses: r-lib/actions/setup-tinytex@v2
     - run: Rscript -e 'print("hello")'
