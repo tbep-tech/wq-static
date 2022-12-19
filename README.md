@@ -20,9 +20,9 @@ For this repository:
 
 Updating the wq dashboard with provisional data (wq-dash repo):
 
-1. After the data are updated on the wq-static repo, save the epcdata RData object created on line 61 of wq1.Rnw to the wq-dash repo data folder 
+1. After the data are updated on the wq-static repo, save the epcdata RData object created on line 67 of wq1.Rnw to the wq-dash repo data folder 
 1. Convert the `sq_q` column in epcdata to logical, as in line 12 in R/dat_build.R, save epcdata again to data folder
-1. In wq-dash.Rmd, comment line 42, uncomment line 41, change line 41 to current year
+1. In wq-dash.Rmd, comment line 42, uncomment line 41, change line 49 to current year
 1. In R/dat_proc.R, comment line 14, uncomment line 13, change line 20 to current year, run R/dat_proc.R
 1. In R/dat_build.R, comment lines 6 - 20 so CI actions don't overwrite epcdata
 
