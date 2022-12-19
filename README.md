@@ -12,8 +12,8 @@ For this repository:
 1. Take downloaded data from wq-static CI build ('Results_Updated.xls') and copy in provisional data from EPC
 1. Check if all data present, should be 10 samples in HB, 8 in LTB, 12 in MTB, 15 in OTB
 1. Save new file, 'Results_Provisional.xlsx' (okay to save as new file format), in data-raw folder
-1. In wq1.Rnw comment lines 61, 65, uncomment lines 60, 64, make sure line 67 is F
-1. In wq2.Rnw comment lines 59, 63, uncomment lines 58, 62, make sure line 65 is F
+1. In wq1.Rnw comment lines 64, 68, uncomment lines 63, 67, make sure line 70 is F
+1. In wq2.Rnw comment lines 62, 66, uncomment lines 61, 65, make sure line 68 is F
 1. Run build.R
 1. Comment lines 6-7, 19-48 on .github/workflows/build.yaml to disable CI (w/o error)
 1. Update text and any other static graphics
@@ -26,4 +26,4 @@ Updating the wq dashboard with provisional data (wq-dash repo):
 1. In R/dat_proc.R, comment line 14, uncomment line 13, change line 20 to current year, run R/dat_proc.R
 1. In R/dat_build.R, comment lines 6 - 20 so CI actions don't overwrite epcdata
 
-Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 67 in wq1.Rnw and line 65 in wq2.Rnw is T for partialyr.
+Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 70 in wq1.Rnw and line 68 in wq2.Rnw is T for partialyr.

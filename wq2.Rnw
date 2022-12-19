@@ -58,14 +58,14 @@ library(ggplot2)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2022
-partialyr <- T
+partialyr <- F
 
 # get legend from an existing ggplot object
 g_legend<-function(a.gplot){
@@ -116,12 +116,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize In 2021, all bay segments met FDEP criteria for chlorophyll, except Old Tampa Bay. The criteria was exceeded for the third year in a row, requiring additional actions by the Tampa Bay Nitrogen Management Consortium to ensure water quality criteria are met under the 2017 Reasonable Assurance Update (RA Update).  The fifth RA annual assessment report for the 2017-2021 period will be submitted in April 2022.
+\footnotesize In 2022, all bay segments met FDEP criteria for chlorophyll. Actions by the Tampa Bay Nitrogen Management Consortium continue to be pursued to ensure water quality criteria are met for the next Reasonable Assurance (RA) period from 2022-2026.  The next five-year RA plan for Tampa Bay was submitted to FDEP in December 2022. The first RA annual assessment report for the 2022-2026 period will be submitted in April 2023.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Elevated concentrations in Old Tampa Bay were primarily due to \textit{Pyrodinium bahamense} during the late summer months.  Additionally, unanticipated release of legacy fertilizer process water and mixed seawater from the Piney Point facility in the spring introduced an estimated 205 tons of nitrogen to Lower Tampa Bay.  A subsequent red tide event occurred in Middle and Lower Tampa Bay later in the summer.
+Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were lower in 2022 compared to years prior, which allowed the chlorophyll criteria to be met for the first time in three years.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts for improving water quality in OTB.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
@@ -196,7 +196,7 @@ dev.off()
 
 \vspace{-0.15in}
 
-\tiny \textit{\textbf{Note}: 2021 nutrient management compliance assessment available from Sherwood, E., Burke, M., Beck, M.W. 2022. TBEP Technical Report \#xx-22.  Please cite this document as Beck, M.W., Burke, M., Raulerson, G. 2022. 2021 Tampa Bay Water Quality Assessment. TBEP Technical Report \#01-22, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2022 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2023. TBEP Technical Report \#xx-23.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2023. 2022 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-23, St. Petersburg, FL.} \\
 
 \end{column}
 
