@@ -116,7 +116,7 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize In 2022, all bay segments met FDEP criteria for chlorophyll. Actions by the Tampa Bay Nitrogen Management Consortium continue to be pursued to ensure water quality criteria are met for the next Reasonable Assurance (RA) period from 2022-2026.  The next five-year RA plan for Tampa Bay was submitted to FDEP in December 2022. The first RA annual assessment report for the 2022-2026 period will be submitted in April 2023.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update demonstrated xxx. During 2022, all bay segments met FDEP criteria for chlorophyll. Tampa Bay Nitrogen Management Consortium participants continue to pursue actions that ensure water quality criteria are met for the next RA period from 2022-2026. The first RA annual assessment report for the 2022-2026 period will be submitted in April 2023.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
