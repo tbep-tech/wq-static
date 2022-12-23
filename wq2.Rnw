@@ -181,14 +181,14 @@ dev.off()
 \vspace{-0.15in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-2022 results showed that Tampa Bay's seagrass coverage remained below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 4,161 acres from 2020 (Figure \ref{fig:sgtrnd}). This marks the first time that seagrass losses have been observed for three consecutive assessment periods since the District's aerial mapping program began in 1988. Large decreases were observed in Old Tampa Bay and Hillsborough Bay. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in this region and elsewhere. Research and management plans are currently being developed to address these losses. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+2022 results showed that Tampa Bay's seagrass coverage remained below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 4,161 acres from 2020 or 11,518 acres lost since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). This marks the first time that seagrass losses have been observed for three consecutive assessment periods since the District's aerial mapping program began in 1988. Large coverage decreases were observed in Old Tampa Bay and Hillsborough Bay. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in this region and elsewhere. Research and management plans are currently being developed to address these losses. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
 \vspace{0.1in}
 \begin{figure}
 \includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png}
-\caption{\footnotesize Seagrass estimates from 1950-2020 (Source: TBEP \& SWFWMD)}
+\caption{\footnotesize Seagrass estimates from 1950-2022 (Source: TBEP \& SWFWMD)}
 \label{fig:sgtrnd}
 \end{figure}
 \end{minipage}
