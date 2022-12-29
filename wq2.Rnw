@@ -157,7 +157,7 @@ pB$widths[2:3] <- maxWidth
 pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 
-pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 6.15, width = 8)
+pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.5, width = 8)
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
@@ -178,23 +178,23 @@ dev.off()
 \vspace{-0.4in}
 
 \begin{block}{Tampa Bay Seagrass Recovery}
-\vspace{-0.15in}
+\vspace{0in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-2022 results showed that Tampa Bay's seagrass coverage remained below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 4,161 acres from 2020 or 11,518 acres lost since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). This marks the first time that seagrass losses have been observed for three consecutive assessment periods since the District's aerial mapping program began in 1988. Large coverage decreases were observed in Old Tampa Bay and Hillsborough Bay. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in this region and elsewhere. Research and management plans are currently being developed to address these losses. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates from SWFWMD can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+2022 results showed that Tampa Bay's seagrass coverage remained below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 4,161 acres from 2020 or 11,518 acres lost since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). This marks the first time that seagrass losses have been observed for three consecutive assessment periods since the District's aerial mapping program began in 1988. Large coverage decreases were observed in Old Tampa Bay and Hillsborough Bay. Increases in the attached algae \textit{Caulerpa prolifera} have also been noted in this region and elsewhere. Research and management plans are currently being developed to address these losses. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
 \vspace{0.1in}
 \begin{figure}
-\includegraphics[width=\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png}
+\includegraphics[width=1.1\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png}
 \caption{\footnotesize Seagrass estimates from 1950-2022 (Source: TBEP \& SWFWMD)}
 \label{fig:sgtrnd}
 \end{figure}
 \end{minipage}
 \end{block}
 
-\vspace{-0.15in}
+\vspace{0in}
 
 \tiny \textit{\textbf{Note}: 2022 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2023. TBEP Technical Report \#xx-23.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2023. 2022 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-23, St. Petersburg, FL.} \\
 
