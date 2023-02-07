@@ -58,12 +58,12 @@ library(ggplot2)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-# xlsx <- here('data-raw', 'Results_Updated.xls')
+# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-epcdata <- read_importwq(xlsx, download_latest = F)
-# epcdata <- read_importwq(xlsx, download_latest = T)
+# epcdata <- read_importwq(xlsx, download_latest = F)
+epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2022
 partialyr <- F
 
@@ -196,7 +196,7 @@ dev.off()
 
 \vspace{0in}
 
-\tiny \textit{\textbf{Note}: 2022 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2023. TBEP Technical Report \#xx-23.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2023. 2022 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-23, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2022 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2023. TBEP Technical Report \#xx-23.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2023. 2022 Tampa Bay Water Quality Assessment. TBEP Technical Report \#03-23, St. Petersburg, FL.} \\
 
 \end{column}
 
