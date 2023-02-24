@@ -66,8 +66,8 @@ xlsx <- here('data-raw', 'Results_Updated.xls')
 # import and download if new
 # epcdata <- read_importwq(xlsx, download_latest = F)
 epcdata <- read_importwq(xlsx, download_latest = T)
-maxyr <- 2022
-partialyr <- F
+maxyr <- 2023
+partialyr <- T
 
 # get legend from an existing ggplot object
 g_legend<-function(a.gplot){
