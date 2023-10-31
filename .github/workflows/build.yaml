@@ -34,7 +34,6 @@ jobs:
             any::knitr
             any::rmarkdown
             any::ggmap
-            any::ggsn
             any::ggrepel
             any::here
             any::tibble
@@ -44,7 +43,6 @@ jobs:
             any::tinytex
             any::pdftools
             any::git2r
-            any::sf
             tbeptools
 
       - name: Build report card
