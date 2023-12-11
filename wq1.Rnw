@@ -78,7 +78,7 @@ g_legend<-function(a.gplot){
 @
 
 \title{\Large \Sexpr{maxyr} Tampa Bay Water Quality Assessments}
-\author{\normalsize A Tampa Bay Estuary Program Initiative to Maintain and Restore the Bay's Seagrass Resources}
+\author{\normalsize A Tampa Bay Estuary Program Initiative to Maintain and Restore \\ the Bay's Seagrass Resources}
  
 \begin{document}
 
@@ -195,7 +195,7 @@ latex(
 
 \end{block}
 
-\vspace{-0.5in}
+\vspace{-0.4in}
 
 \begin{columns}[t]
 
@@ -281,7 +281,7 @@ dev.off()
 
 \vspace{-0.4cm}
 
-\tiny \textit{\textbf{Note}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County.  Consulting support provided by Janicki Environmental, Inc.  Full methods in Janicki et al. 2000. \href{https://drive.google.com/file/d/1XMULU8w4syWcSv_ciOUOhnC_G4xt6GIF/view?usp=drivesdk}{TBEP Technical Report \#04-00}. Points in map above show site-specific attainment of a bay segment target and are for reference only.} \\
+\tiny \textit{\textbf{Note}: Continuing water quality monitoring support provided by the Environmental Protection Commission of Hillsborough County. Full methods in Janicki et al. 2000. \href{https://drive.google.com/file/d/1XMULU8w4syWcSv_ciOUOhnC_G4xt6GIF/view?usp=drivesdk}{TBEP Technical Report \#04-00}. Points in map above show site-specific attainment of a bay segment target and are for reference only.} \\
 
 \end{column}
 
