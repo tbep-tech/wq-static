@@ -14,8 +14,8 @@ For this repository:
 1. Save new file, 'Results_Provisional.xlsx' (okay to save as new file format), in data-raw folder
 1. In wq1.Rnw comment lines 64, 68, uncomment lines 63, 67, make sure line 70 is F
 1. In wq2.Rnw comment lines 62, 66, uncomment lines 61, 65, make sure line 68 is F
-1. Run build.R
-1. Comment lines 6-7, 19-48 on .github/workflows/build.yaml to disable CI (w/o error)
+1. Run build.R through line 27
+1. Comment lines 6-7, 19-56 on .github/workflows/build.yaml to disable CI (w/o error)
 1. Update text and any other static graphics
 
 Updating the wq dashboard with provisional data (wq-dash repo):

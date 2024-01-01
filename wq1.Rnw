@@ -60,14 +60,14 @@ library(gridExtra)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2023
-partialyr <- T
+partialyr <- F
 
 # get legend from an existing ggplot object
 g_legend<-function(a.gplot){
@@ -152,7 +152,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). Unlike the past seven years, 2022 water quality conditions in Old Tampa Bay (OTB) were also supportive of seagrass with annual averages of chlorophyll and light penetration remaining below management targets.  Chlorophyll and light penetration was supportive of seagrass in all other segments using existing targets (Table \ref{tab:segtab}). However, water quality conditions in OTB and HB remain under investigation based on recent seagrass coverage trends.
+Water quality remained supportive of seagrass in Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). 2023 water quality conditions in Old Tampa Bay (OTB) were also supportive of seagrass similar to 2022 with annual averages of chlorophyll and light penetration remaining below management targets.  Chlorophyll and light penetration was supportive of seagrass in all other segments using existing targets (Table \ref{tab:segtab}). However, water quality conditions in OTB and HB remain under investigation based on recent seagrass coverage trends.
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}
