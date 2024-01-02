@@ -51,7 +51,7 @@ library(dplyr)
 library(knitr)
 library(here)
 library(tbeptools)
-library(gridExtra)
+library(patchwork)
 library(ggplot2)
 
 # remotes::install_github("tbep-tech/tbeptools")
@@ -66,13 +66,6 @@ epcdata <- read_importwq(xlsx, download_latest = F)
 # epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2023
 partialyr <- F
-
-# get legend from an existing ggplot object
-g_legend<-function(a.gplot){
-  tmp <- ggplot_gtable(ggplot_build(a.gplot))
-  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
-  legend <- tmp$grobs[[leg]]
-  return(legend)}
 @
 
 \begin{document}
@@ -116,12 +109,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisfied requirements for approval during the next five year period. During 2022, all bay segments met FDEP criteria for chlorophyll. Tampa Bay Nitrogen Management Consortium participants continue to pursue actions that ensure water quality criteria are met for the next RA period from 2022-2026. The second RA annual assessment report for the 2022-2026 period will be submitted in April 2024.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisfied requirements for approval during the next five year period. During 2023, all bay segments met FDEP criteria for chlorophyll. Tampa Bay Nitrogen Management Consortium participants continue to pursue actions that ensure water quality criteria are met for the next RA period from 2022-2026. The second RA annual assessment report for the 2022-2026 period will be submitted in April 2024.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were lower in 2022 compared to years prior, which allowed the chlorophyll criteria to be met again similar to 2022.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts for improving water quality in OTB.
+Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were lower in 2023 compared to years prior, which allowed the chlorophyll criteria to be met again similar to 2022.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts for improving water quality in OTB.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
@@ -133,37 +126,19 @@ thrthm <- theme(
     axis.title = element_blank(),
     plot.title = element_text(size = 15, colour = txtcol),
     legend.text = element_text(size = 12, colour = txtcol),
-    axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0.5)
+    axis.text.x = element_text(size = 10, colour = txtcol, angle = 0, hjust = 0.5), 
+    legend.position = 'top'
   )
 
-p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr) + thrthm
-p1leg <- g_legend(p1)
-p1 <- p1 + theme(legend.position = 'none')
-p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr) + thrthm + theme(legend.position = 'none')
-p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr) + thrthm + theme(legend.position = 'none')
-p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr, partialyr = partialyr) + thrthm + theme(legend.position = 'none')
+p1 <- show_boxplot(epcdata, bay_segment = "OTB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr)
+p2 <- show_boxplot(epcdata, bay_segment = "HB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr)
+p3 <- show_boxplot(epcdata, bay_segment = "MTB", yrrng = yrrng, yrsel = maxyr, partialyr = partialyr)
+p4 <- show_boxplot(epcdata, bay_segment = "LTB",  yrrng = yrrng, yrsel = maxyr, partialyr = partialyr)
 
-# align
-# Get the widths
-pA <- ggplot_gtable(ggplot_build(p1))
-pB <- ggplot_gtable(ggplot_build(p2))
-pC <- ggplot_gtable(ggplot_build(p3))
-pD <- ggplot_gtable(ggplot_build(p4))
-maxWidth = grid::unit.pmax(pA$widths[2:3], pB$widths[2:3], pD$widths[2:3], pD$widths[2:3])
-
-# Set the widths
-pA$widths[2:3] <- maxWidth
-pB$widths[2:3] <- maxWidth
-pC$widths[2:3] <- maxWidth
-pD$widths[2:3] <- maxWidth
+p <- (guide_area() / (p1 + p2 + p3 + p4)) + plot_layout(ncol = 1, guides = 'collect', heights = unit(c(1, 1), c("cm", "null"))) & thrthm
 
 pdf(here('figure', 'chlboxplot.pdf'), family = 'serif', height = 5.5, width = 8)
-grid.arrange(
-  p1leg,
-  arrangeGrob(pA, pB, ncol = 2),
-  arrangeGrob(pC, pD, ncol = 2),
-  ncol = 1, heights = c(0.1, 1, 1)
-)
+p
 dev.off()
 @
 
@@ -196,7 +171,7 @@ dev.off()
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: 2023 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2024. TBEP Technical Report \#xx-24.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2024. 2023 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-23, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2023 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2024. TBEP Technical Report \#xx-24.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2024. 2023 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-24, St. Petersburg, FL.} \\
 
 \end{column}
 

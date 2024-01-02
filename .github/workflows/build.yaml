@@ -38,7 +38,7 @@ jobs:
       #       any::here
       #       any::tibble
       #       any::ggplot2
-      #       any::gridExtra
+      #       any::patchwork
       #       any::Hmisc
       #       any::tinytex
       #       any::pdftools
