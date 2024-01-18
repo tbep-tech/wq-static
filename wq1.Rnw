@@ -145,7 +145,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality remained supportive of seagrass in Old Tampa Bay (OTB), Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). 2023 water quality conditions continued to improve from the prior year and were deemed supportive of seagrass (annual averages of chlorophyll and light penetration remained below management targets in all bay segments; Table \ref{tab:segtab}). Regardless, water quality conditions in OTB and HB remain under investigation based on significant seagrass coverage losses through 2022.
+Water quality remained supportive of seagrass in all bay segments and continued to improve in comparison to prior years. Annual averages of chlorophyll-a and light penetration remained below management targets in Old Tampa Bay (OTB), Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). Despite these improvements, water quality conditions in OTB and HB remain under investigation based on observations of significant decreases in seagrass coverage between 2016 and 2022.
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}
