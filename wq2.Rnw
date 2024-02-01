@@ -58,12 +58,12 @@ library(ggplot2)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-# xlsx <- here('data-raw', 'Results_Updated.xls')
+# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-epcdata <- read_importwq(xlsx, download_latest = F)
-# epcdata <- read_importwq(xlsx, download_latest = T)
+# epcdata <- read_importwq(xlsx, download_latest = F)
+epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2023
 partialyr <- F
 @
@@ -171,7 +171,7 @@ Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal 
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: 2023 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2024. TBEP Technical Report \#xx-24.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2024. 2023 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-24, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2023 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2024. TBEP Technical Report \#04-24.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2024. 2023 Tampa Bay Water Quality Assessment. TBEP Technical Report \#01-24, St. Petersburg, FL.} \\
 
 \end{column}
 
