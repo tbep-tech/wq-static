@@ -66,8 +66,8 @@ xlsx <- here('data-raw', 'Results_Updated.xls')
 # import and download if new
 # epcdata <- read_importwq(xlsx, download_latest = F)
 epcdata <- read_importwq(xlsx, download_latest = T)
-maxyr <- 2023
-partialyr <- F
+maxyr <- 2024
+partialyr <- T
 @
 
 \title{\Large \Sexpr{maxyr} Tampa Bay Water Quality Assessments}
