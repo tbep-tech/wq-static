@@ -1,6 +1,6 @@
 
 # put current year here
-maxyr <- 2023
+maxyr <- 2024
 
 # input maxyr into wq1, knit, convert to pdf
 wq1 <- readLines('wq1.Rnw')
