@@ -15,7 +15,6 @@
 \usepackage{subfig}
 \usepackage{booktabs, array}
 \usepackage{tabularx}
-\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[orientation=landscape,size=custom,width=21.59,height=27.94,scale=0.45]{beamerposter} % in cm, equal to 8.5" wide x 11" high
 \usepackage{color, colortbl}
