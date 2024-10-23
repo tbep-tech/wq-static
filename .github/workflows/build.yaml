@@ -42,7 +42,7 @@ jobs:
             any::Hmisc
             any::tinytex
             any::pdftools
-            any::git2r
+            git2r (0.33.0)
             tbeptools
 
       - name: Build report card
