@@ -37,7 +37,7 @@ jobs:
             any::Hmisc
             any::tinytex
             any::pdftools
-            any::git2r
+            url::https://cran.r-project.org/src/contrib/Archive/git2r/git2r_0.33.0.tar.gz
             tbeptools
 
       - name: Build report card
