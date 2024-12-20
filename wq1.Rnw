@@ -59,14 +59,14 @@ library(patchwork)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2024
-partialyr <- T
+partialyr <- F
 @
 
 \title{\Large \Sexpr{maxyr} Tampa Bay Water Quality Assessments}
@@ -144,7 +144,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality remained supportive of seagrass in all bay segments and continued to improve in comparison to prior years. Annual averages of chlorophyll-a and light penetration remained below management targets in Old Tampa Bay (OTB), Hillsborough Bay (HB), Middle Tampa Bay (MTB), and Lower Tampa Bay (LTB)(Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). Despite these improvements, water quality conditions in OTB and HB remain under investigation based on observations of significant decreases in seagrass coverage between 2016 and 2022.
+Water quality remained supportive of seagrass in most bay segments in comparison to prior years (Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). One tropical storm and two hurricanes affected the region in the fall. As a result, management targets for chlorophyll-a were exceeded in Old Tampa Bay (OTB) and Middle Tampa Bay (MTB).  Light attenuation targets were exceeded in Lower Tampa Bay (LTB), causing the bay segment to receive a "Caution" outcome.  Water quality conditions in OTB remain under investigation based on observations of significant decreases in seagrass coverage between 2016 and 2022.
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}

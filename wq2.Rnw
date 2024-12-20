@@ -57,14 +57,14 @@ library(ggplot2)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2024
-partialyr <- T
+partialyr <- F
 @
 
 \begin{document}
@@ -108,12 +108,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2023, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the next RA period from 2022-2026. The second RA annual assessment report for the 2022-2026 period will be submitted in April 2024.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2023, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The second RA annual assessment report for the 2022-2026 period will be submitted in April 2025.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were evaluated within the bay on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were lower in 2023 compared to prior years, which allowed the chlorophyll criteria to again be met over the 2022-2023 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts for improving water quality in OTB.
+Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to tropical storm activity in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average were lower compared to prior years, which allowed the chlorophyll criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
@@ -155,7 +155,7 @@ dev.off()
 \vspace{0in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 11,518 acres since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired during the 2023-2024 winter period. The largest coverage decreases were observed in Old Tampa Bay and Hillsborough Bay where increases in the attached algae \textit{Caulerpa prolifera} were also observed. However, 2023 seagrass transect data indicate this attached algae species is now in decline. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 11,518 acres since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired during the 2023-2024 winter period. The largest coverage decreases were observed in Old Tampa Bay and Hillsborough Bay where increases in the attached algae \textit{Caulerpa prolifera} were also observed. However, 2024 seagrass transect data indicate this attached algae species is now in decline. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
