@@ -29,7 +29,7 @@ Updating the wq dashboard with provisional data (wq-dash repo):
 Updating state of the bay (state of the bay repo): 
 
 1. Copy 'Results_Provisional.xlsx' to state of the bay repo data-raw folder
-1. In docs/water-quality-decision-matrix.Rmd, comment lines 13, 17, uncomment lines 14, 18, change line 10 to current year
+1. In docs/water-quality-decision-matrix.Rmd, comment lines 13, 18, uncomment lines 14, 17, change line 10 to current year
 1. Knit docs/water-quality-decision-matrix.Rmd and verify changes
 
-Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 70 in wq1.Rnw and line 68 in wq2.Rnw is T for partialyr.
+Note that once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 69 in wq1.Rnw and line 67 in wq2.Rnw is T for partialyr.
