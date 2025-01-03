@@ -14,6 +14,7 @@ For this repository:
 1. Save new file, 'Results_Provisional.xlsx' (okay to save as new file format), in data-raw folder
 1. In wq1.Rnw comment lines 63, 67, uncomment lines 62, 66, make sure line 69 is F
 1. In wq2.Rnw comment lines 61, 65, uncomment lines 60, 64, make sure line 67 is F
+1. In wq2.Rnw change dates and report numbers to xx-curyr on line 173
 1. Run build.R through line 27
 1. Comment lines 6-7, 19-56 on .github/workflows/build.yaml to disable CI (w/o error)
 1. Update text and any other static graphics

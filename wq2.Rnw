@@ -170,7 +170,7 @@ Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal 
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: 2023 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2024. TBEP Technical Report \#04-24.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2024. 2023 Tampa Bay Water Quality Assessment. TBEP Technical Report \#01-24, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: 2024 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2025. TBEP Technical Report \#xx-25.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2025. 2024 Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-25, St. Petersburg, FL.} \\
 
 \end{column}
 
