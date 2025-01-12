@@ -144,7 +144,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality remained supportive of seagrass in most bay segments in comparison to prior years (Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). One tropical storm and two hurricanes affected the region in the fall. As a result, management targets for chlorophyll-a were exceeded in Old Tampa Bay (OTB) and Middle Tampa Bay (MTB).  Light attenuation targets were exceeded in Lower Tampa Bay (LTB), causing the bay segment to receive a "Caution" outcome.  Water quality conditions in OTB remain under investigation based on observations of significant decreases in seagrass coverage between 2016 and 2022.
+Water quality remained supportive of seagrass in most bay segments in comparison to prior years (Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). One tropical storm and two hurricanes affected the region in the fall. As a result, management targets for chlorophyll-a were exceeded all bay segments except Hillsborough Bay (HB).  Light attenuation targets were also exceeded in Lower Tampa Bay (LTB), causing the bay segment to receive a "Caution" outcome.  Water quality conditions in OTB remain under investigation based on observations of significant decreases in seagrass coverage between 2016 and 2022.
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}
