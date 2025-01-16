@@ -96,7 +96,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/chlmat.pdf}}
-\caption{\footnotesize Bay segment attainment of chlorophyll criteria from 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
+\caption{\footnotesize Bay segment attainment of chlorophyll-a criteria from 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
 \label{fig:chlmat}
 \end{figure}
 
@@ -108,12 +108,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2023, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The second RA annual assessment report for the 2022-2026 period will be submitted in April 2025.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2024, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The third RA annual assessment report for the 2022-2026 period will be submitted in April 2025.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to tropical storm activity in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average were lower compared to prior years, which allowed the chlorophyll criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts.
+Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to several tropical storms in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average were lower compared to prior years, which allowed the chlorophyll-a criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
