@@ -113,7 +113,7 @@ dev.off()
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to several tropical storms in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average lower compared to prior years, which allowed the chlorophyll-a criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue as a focus of research and management efforts.
+Chlorophyll-a concentrations were elevated throughout the bay during late summer/fall months in \Sexpr{maxyr} due to the influence of several tropical storms on the region (Figure \ref{fig:chlboxplot}). Mixed-assemblage algae blooms were reported in Hillsborough Bay, Old Tampa Bay, and Middle Tampa Bay, while low concentrations of \textit{Karenia brevis} continued to be observed in Lower Tampa Bay into the winter months. Although understanding and mitigating blooms of \textit{Pyrodinium bahamense} in OTB continues to be a focus of research and management efforts, summer concentrations in Old Tampa Bay were lower compared to prior years and the chlorophyll-a criteria was met for the third consecutive year of the RA period.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
@@ -155,14 +155,14 @@ dev.off()
 \vspace{0in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan Update}. The 2022 baywide estimate was 30,137 acres, representing a decrease of 11,518 acres since peak conditions in 2016 (Figure \ref{fig:sgtrnd}). The next SWFWMD seagrass coverage estimates will be developed from aerial photographs acquired during the 2023-2024 winter period. The largest coverage decreases were observed in Old Tampa Bay and Hillsborough Bay where increases in the attached algae \textit{Caulerpa prolifera} were also observed. However, 2024 seagrass transect data indicate this attached algae species is now in decline. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan}. The draft 2024 baywide estimate was 31,590 acres, representing a slight increase of 1,453 acres since 2022 (Figure \ref{fig:sgtrnd}). Gains were observed in all bay segments, except Old Tampa Bay, which continues to experience declines in seagrass coverage. These estimates were derived from aerial photographs acquired prior to Hurricanes Debby, Helene, and Milton. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
 \vspace{0.1in}
 \begin{figure}
 \includegraphics[width=1.1\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png}
-\caption{\footnotesize Seagrass estimates from 1950-2022 (Source: TBEP \& SWFWMD)}
+\caption{\footnotesize Seagrass estimates from 1950-2024 (Source: TBEP \& SWFWMD)}
 \label{fig:sgtrnd}
 \end{figure}
 \end{minipage}
