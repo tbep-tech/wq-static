@@ -113,7 +113,7 @@ dev.off()
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to several tropical storms in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average were lower compared to prior years, which allowed the chlorophyll-a criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue to be the focus of research and management efforts.
+Chlorophyll-a concentrations were elevated within the bay during late summer/fall months in \Sexpr{maxyr} due to several tropical storms in the region (Figure \ref{fig:chlboxplot}). Summer concentrations in Old Tampa Bay were slightly elevated but on average lower compared to prior years, which allowed the chlorophyll-a criteria to again be met over the 2022-2024 period.  Understanding and mitigating summer blooms of \textit{Pyrodinium bahamense} in OTB continue as a focus of research and management efforts.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
