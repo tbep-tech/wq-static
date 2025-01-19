@@ -152,7 +152,7 @@ dev.off()
 \vspace{-0.4in}
 
 \begin{block}{Tampa Bay Seagrass Recovery}
-\vspace{0in}
+\vspace{-0.25in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
 Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan}. The draft 2024 baywide estimate was 31,590 acres, representing a slight increase of 1,453 acres since 2022 (Figure \ref{fig:sgtrnd}). Gains were observed in all bay segments, except Old Tampa Bay, which continues to experience declines in seagrass coverage. These estimates were derived from aerial photographs acquired prior to Hurricanes Debby, Helene, and Milton. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
