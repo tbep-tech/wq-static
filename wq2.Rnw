@@ -161,7 +161,7 @@ Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal 
 \begin{minipage}{0.32\textwidth}
 \vspace{0.1in}
 \begin{figure}
-\includegraphics[width=1.1\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png} % https://github.com/tbep-tech/seagrass-analysis/blob/main/R/annual_coverage_plot.R
+\includegraphics[width=1.1\textwidth, trim = 0cm 0cm 0cm -1cm]{www/seagrasscov.png} % copied from https://github.com/tbep-tech/State-of-the-Bay/blob/master/figures/seagrasscov.png
 \caption{\footnotesize Seagrass estimates from 1950-2024 (Source: TBEP \& SWFWMD)}
 \label{fig:sgtrnd}
 \end{figure}
