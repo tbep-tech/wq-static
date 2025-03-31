@@ -4,7 +4,7 @@ on:
       - main
       - master
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 7,21 * *" # on the 7 and 21st day of each month
     
 name: build 
 
