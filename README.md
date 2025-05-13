@@ -35,4 +35,4 @@ Repository for building static water quality reporting tool documents.
 
 ### Reverting 
 
-Once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 69 in wq1.Rnw and line 67 in wq2.Rnw is T for partialyr.  Also uncomment line 62 and comment line 63 in wq1.Rnw and uncomment line 60 and comment line 61 in wq2.Rnw.
+Once the Nov/Dec data are no longer provisional (on EPC FTP), undo the above, set maxyr as next year.  For next year's provisional report card, this can only be done once January data are available.  Also make sure line 69 in wq1.Rnw and line 67 in wq2.Rnw is T for partialyr.  Also uncomment line 63 and comment line 62 in wq1.Rnw and uncomment line 61 and comment line 60 in wq2.Rnw.
