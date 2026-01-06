@@ -108,12 +108,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the 2022 Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2024, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The third RA annual assessment report for the 2022-2026 period will be submitted in April 2025.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2025, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The fourth RA annual assessment report for the 2022-2026 period will be submitted in April 2026.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were elevated throughout the bay during late summer/fall months in \Sexpr{maxyr} due to the influence of several tropical storms on the region (Figure \ref{fig:chlboxplot}). Mixed-assemblage algae blooms were reported in Hillsborough Bay, Old Tampa Bay, and Middle Tampa Bay, while low concentrations of \textit{Karenia brevis} continued to be observed in Lower Tampa Bay into the winter months. Although understanding and mitigating blooms of \textit{Pyrodinium bahamense} in OTB continues to be a focus of research and management efforts, summer concentrations in Old Tampa Bay were lower compared to prior years and the chlorophyll-a criteria was met for the third consecutive year of the RA period.
+Chlorophyll-a concentrations were evaluated on a monthly basis during 2025 and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Dry conditions in the late summer and early fall contributed to lower concentrations in all bay segments. In Old Tampa Bay, observations of \textit{Pyrodinium bahamense} have decreased significantly since 2023 and the chlorophyll-a criteria was met for the fourth consecutive year of the RA period.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
