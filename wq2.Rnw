@@ -57,14 +57,14 @@ library(ggplot2)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2025
-partialyr <- T
+partialyr <- F
 @
 
 \begin{document}
@@ -108,12 +108,12 @@ dev.off()
 \begin{column}{.79\linewidth}
 
 \begin{block}{Maintaining Reasonable Assurance \& TMDL Compliance}
-\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During 2025, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The fourth RA annual assessment report for the 2022-2026 period will be submitted in April 2026.
+\footnotesize On behalf of the Tampa Bay Nitrogen Management Consortium, TBEP submitted the Reasonable Assurance (RA) Update for the 2017-2021 period to FDEP in December 2022. FDEP concluded that the RA Update satisifies efforts to maintain water quality during the next five year period. During \Sexpr{maxyr}, all bay segments met FDEP numeric nutrient criteria. Tampa Bay Nitrogen Management Consortium participants continue to implement actions that ensure water quality criteria are met for the current RA period from 2022-2026. The fourth RA annual assessment report for the 2022-2026 period will be submitted in April 2026.
 \end{block}
 
 \begin{block}{\Sexpr{maxyr} Chl-a Monthly Variation Compared to 1974-\Sexpr{maxyr - 1}}
 \footnotesize
-Chlorophyll-a concentrations were evaluated on a monthly basis during 2025 and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Dry conditions in the late summer and early fall contributed to lower concentrations in all bay segments. In Old Tampa Bay, observations of \textit{Pyrodinium bahamense} have decreased significantly since 2023 and the chlorophyll-a criteria was met for the fourth consecutive year of the RA period.
+Chlorophyll-a concentrations were evaluated on a monthly basis during \Sexpr{maxyr} and compared to prior years' levels (Figure \ref{fig:chlboxplot}). Dry conditions in the late summer and early fall contributed to lower concentrations in all bay segments. In Old Tampa Bay, observations of \textit{Pyrodinium bahamense} have decreased significantly since 2023 and the chlorophyll-a criteria was met for the fourth consecutive year of the RA period.
 \end{block}
 
 <<chlboxplot, echo = F, fig = F, include = F, eval = T>>=
@@ -170,7 +170,7 @@ Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal 
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: 2024 nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. 2025. TBEP Technical Report \#04-25.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. 2025. 2024 Tampa Bay Water Quality Assessment. TBEP Technical Report \#03-25, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: \Sexpr{maxyr} nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. TBEP Technical Report \#xx-26.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. \Sexpr{maxyr}  Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-26, St. Petersburg, FL.} \\
 
 \end{column}
 

@@ -59,14 +59,14 @@ library(patchwork)
 # devtools::load_all('../tbeptools/.')
 
 # local file path
-# xlsx <- here('data-raw', 'Results_Provisional.xlsx')
-xlsx <- here('data-raw', 'Results_Updated.xls')
+xlsx <- here('data-raw', 'Results_Provisional.xlsx')
+# xlsx <- here('data-raw', 'Results_Updated.xls')
 
 # import and download if new
-# epcdata <- read_importwq(xlsx, download_latest = F)
-epcdata <- read_importwq(xlsx, download_latest = T)
+epcdata <- read_importwq(xlsx, download_latest = F)
+# epcdata <- read_importwq(xlsx, download_latest = T)
 maxyr <- 2025
-partialyr <- T
+partialyr <- F
 @
 
 \title{\Large \Sexpr{maxyr} Tampa Bay Water Quality Assessments}
@@ -144,7 +144,7 @@ Year to year algae abundance (measured as chlorophyll-a concentrations) and visi
 \vspace{-0.1in}
 \begin{minipage}{0.45\textwidth}
 \footnotesize
-Water quality remained supportive of seagrass in all bay segments throughout 2025 due, in part, to relatively dry conditions (Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). Annual averages of chlorophyll-a and light penetration were below management targets in all bay segments, although light attenuation increased slightly in Old Tampa Bay (OTB). Water quality conditions in OTB remain under investigation based on continued declines in seagrass coverage between 2016 and 2024. 
+Water quality remained supportive of seagrass in all bay segments throughout \Sexpr{maxyr} due, in part, to relatively dry conditions (Table \ref{tab:segtab}, Figure \ref{fig:thrplot}). Annual averages of chlorophyll-a and light penetration were below management targets in all bay segments, although light attenuation increased slightly in Old Tampa Bay (OTB). Water quality conditions in OTB remain under investigation based on continued declines in seagrass coverage between 2016 and 2024. 
 \end{minipage}
 \hspace{0.1in}
 \begin{minipage}{0.5\textwidth}
