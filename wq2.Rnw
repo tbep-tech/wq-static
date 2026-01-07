@@ -96,7 +96,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/chlmat.pdf}}
-\caption{\footnotesize Bay segment attainment of chlorophyll-a criteria from 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
+\caption{\footnotesize Bay segment attainment of chlorophyll-a criteria from 1975 to \Sexpr{maxyr}.}
 \label{fig:chlmat}
 \end{figure}
 
@@ -155,7 +155,7 @@ dev.off()
 \vspace{-0.25in}
 \begin{minipage}{0.6\textwidth}
 \footnotesize
-Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan}. The 2024 baywide estimate was 31,563 acres, representing a slight increase of 1,426 acres since 2022 (Figure \ref{fig:sgtrnd}). Gains were observed in all bay segments, except Old Tampa Bay, which continues to experience declines in seagrass coverage. These estimates were derived from aerial photographs acquired prior to Hurricanes Debby, Helene, and Milton. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
+Seagrass coverage in Tampa Bay increased by 1,407 acres between 2022 and 2024, although Tampa Bay's total seagrass coverage remains below the 40,000 acre recovery goal defined in the \href{https://tbep.org/habitat-master-plan-update/}{Habitat Master Plan}. The 2024 baywide estimate was 31,563 acres. (Figure \ref{fig:sgtrnd}). Gains were observed in all bay segments, except Old Tampa Bay, where continued losses were observed. In 2025, annual seagrass transect surveys for Old Tampa Bay show a slight increase in frequency of occurrence, although definitive changes in coverage cannot be assessed until the next update from the SWFWMD using aerial images obtained during the winter 2025-26 period. More information on the bay's seagrass trends using transect monitoring data can be found at \href{https://shiny.tbep.org/seagrasstransect-dash/}{https://shiny.tbep.org/seagrasstransect-dash/} and using the coverage estimates can be found at \href{https://shiny.tbep.org/seagrass-analysis/}{https://shiny.tbep.org/seagrass-analysis/}.
 \end{minipage}
 \hspace{0.2in}
 \begin{minipage}{0.32\textwidth}
