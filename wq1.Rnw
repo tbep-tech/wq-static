@@ -101,7 +101,7 @@ dev.off()
 
 \begin{figure}
 \centerline{\includegraphics[trim = 0cm 0cm 0cm 0cm, width=1.1\linewidth]{figure/attainmat.pdf}}
-\caption{\footnotesize Decision matrix results for 1975 to \Sexpr{maxyr} (April, May data missing for 2020).}
+\caption{\footnotesize Decision matrix results for 1975 to \Sexpr{maxyr}.}
 \label{fig:attainmat}
 \end{figure}
 
