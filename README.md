@@ -16,7 +16,8 @@ Repository for building static water quality reporting tool documents.
 1. In wq2.Rnw comment lines 61, 65, uncomment lines 60, 64, make sure line 67 is F
 1. In wq2.Rnw change dates and report numbers to xx-curyr on line 173
 1. Run build.R through line 27
-1. Comment lines 2-3 (cron schedule) on .github/workflows/build.yaml so data aren't overwritten by CI
+1. Comment lines 2-3 (cron schedule) on .github/workflows/build.yaml
+1. Comment lines 28-33 in `build.R` to allow workflow dispatch build
 1. Update text and any other static graphics
 
 ### Updating the wq dashboard with provisional data (wq-dash repo):
