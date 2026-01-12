@@ -170,7 +170,7 @@ Baywide seagrass coverage is estimated to be 31,563 acres (Figure \ref{fig:sgtrn
 
 \vspace{-0.1in}
 
-\tiny \textit{\textbf{Note}: \Sexpr{maxyr} nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. TBEP Technical Report \#xx-26.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. \Sexpr{maxyr}  Tampa Bay Water Quality Assessment. TBEP Technical Report \#xx-26, St. Petersburg, FL.} \\
+\tiny \textit{\textbf{Note}: \Sexpr{maxyr} nutrient management compliance assessment available from Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. TBEP Technical Report \#xx-26.  Please cite this document as Beck, M.W., Burke, M., Sherwood, E. \Sexpr{maxyr + 1}. \Sexpr{maxyr}  Tampa Bay Water Quality Assessment. TBEP Technical Report \#01-26, St. Petersburg, FL.} \\
 
 \end{column}
 
