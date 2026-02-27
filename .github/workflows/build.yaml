@@ -1,6 +1,6 @@
 on:
-  # schedule:
-  #   - cron: "0 0 7,21 * *" # on the 7 and 21st day of each month
+  schedule:
+    - cron: "0 0 7,21 * *" # on the 7 and 21st day of each month
   workflow_dispatch:
   
 name: build 
